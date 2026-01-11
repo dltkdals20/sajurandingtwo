@@ -514,6 +514,11 @@ export default function MobileLanding() {
                 ))}
               </div>
             </div>
+            {/* 하단 이미지 */}
+            <div className="grid gap-2 sm:gap-4">
+              <img alt="추천 이미지" className="h-[100px] w-full rounded-[16px] object-cover sm:h-[220px]" src={friendIllustration} />
+              <img alt="혜택 이미지" className="h-[100px] w-full rounded-[16px] object-cover sm:h-[220px]" src={friendIllustration2} />
+            </div>
           </div>
         </div>
       </section>
@@ -528,10 +533,6 @@ export default function MobileLanding() {
             <button className="rounded-full bg-gradient-to-b from-[#ff8c42] to-[#ff6b1a] px-5 py-3 text-sm font-semibold text-white shadow-[0px_12px_20px_-10px_rgba(255,107,26,0.7)] sm:py-4 sm:text-base">
               상담문의 (카카오톡)
             </button>
-          </div>
-          <div className="grid gap-2 sm:gap-4">
-            <img alt="추천 이미지" className="h-[160px] w-full rounded-[16px] object-cover sm:h-[220px]" src={friendIllustration} />
-            <img alt="혜택 이미지" className="h-[160px] w-full rounded-[16px] object-cover sm:h-[220px]" src={friendIllustration2} />
           </div>
         </div>
       </section>
