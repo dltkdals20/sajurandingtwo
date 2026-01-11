@@ -166,7 +166,7 @@ export default function MobileLanding() {
             <span className="rounded-full bg-gradient-to-b from-[#ff8c42] to-[#ff6b1a] px-4 py-1 text-sm font-semibold text-white">
               1만원대
             </span>
-            <span className="text-base font-semibold text-[#2d2d2d] sm:text-lg">로 1년 설계</span>
+            <span className="text-base font-semibold text-[#2d2d2d] underline decoration-[#ff8c42] decoration-2 underline-offset-2 sm:text-lg">로 1년 설계</span>
           </div>
           <p className="text-sm leading-6 text-[#666]">
             지금 내 흐름을 읽고, 2026년을
