@@ -205,9 +205,9 @@ export default function MobileLanding() {
                 <li>✓ 24시간 내 전달</li>
               </ul>
             </div>
-            <button className="mt-4 w-full rounded-full bg-gradient-to-b from-[#ff8c42] to-[#ff6b1a] px-5 py-3 text-sm font-semibold text-white shadow-[0px_12px_20px_-10px_rgba(255,107,26,0.7)] sm:mt-5 sm:py-4 sm:text-base">
+            <a href="https://open.kakao.com/o/st4GSXai" target="_blank" rel="noopener noreferrer" className="mt-4 w-full rounded-full bg-gradient-to-b from-[#ff8c42] to-[#ff6b1a] px-5 py-3 text-sm font-semibold text-white shadow-[0px_12px_20px_-10px_rgba(255,107,26,0.7)] sm:mt-5 sm:py-4 sm:text-base block text-center">
               지금 신청하기
-            </button>
+            </a>
           </div>
           <p className="mt-3 text-center text-xs text-[#6a7282] sm:mt-4">* 신년 특별 할인은 한정 기간 운영됩니다</p>
         </div>
@@ -237,12 +237,12 @@ export default function MobileLanding() {
             <span className="inline-flex items-center rounded-full bg-white/20 px-4 py-1 text-xs">모바일 url 링크 제공</span>
             <p className="mt-3 text-2xl font-semibold sm:mt-4 sm:text-[36px]">10,000원</p>
             <div className="mt-4 grid gap-2 sm:mt-5 sm:gap-3">
-              <button className="rounded-full bg-white px-4 py-2 text-sm font-semibold text-[#ff7d30] sm:py-3">
+              <a href="https://talk.naver.com/WI2DRB9" target="_blank" rel="noopener noreferrer" className="rounded-full bg-white px-4 py-2 text-sm font-semibold text-[#ff7d30] sm:py-3 block text-center">
                 상담문의 (네이버 톡톡)
-              </button>
-              <button className="rounded-full bg-white px-4 py-2 text-sm font-semibold text-[#ff7d30] sm:py-3">
+              </a>
+              <a href="https://open.kakao.com/o/st4GSXai" target="_blank" rel="noopener noreferrer" className="rounded-full bg-white px-4 py-2 text-sm font-semibold text-[#ff7d30] sm:py-3 block text-center">
                 상담문의 (카카오 오픈채팅)
-              </button>
+              </a>
             </div>
             <p className="mt-3 text-xs text-white/90 sm:mt-4">
               * 안내사항: 리포트는 신청 후 24시간 이내로 링크로 전달됩니다.
@@ -312,14 +312,14 @@ export default function MobileLanding() {
               이미 많은 분들이 사주 운세 해석본으로 2026년 운세를 정리했어요
             </p>
             <div className="grid gap-2 sm:gap-3">
-              <button className="rounded-full bg-gradient-to-b from-[#ff8c42] to-[#ff6b1a] px-4 py-2 text-sm font-semibold text-white sm:py-3">
+              <a href="https://talk.naver.com/WI2DRB9" target="_blank" rel="noopener noreferrer" className="rounded-full bg-gradient-to-b from-[#ff8c42] to-[#ff6b1a] px-4 py-2 text-sm font-semibold text-white sm:py-3 block text-center">
                 <span className="block">나도 상담 받아보기</span>
                 <span className="block text-xs">네이버 톡톡</span>
-              </button>
-              <button className="rounded-full bg-white px-4 py-2 text-sm font-semibold text-[#ff7d30] ring-1 ring-[#ffd7b0] sm:py-3">
+              </a>
+              <a href="https://open.kakao.com/o/st4GSXai" target="_blank" rel="noopener noreferrer" className="rounded-full bg-white px-4 py-2 text-sm font-semibold text-[#ff7d30] ring-1 ring-[#ffd7b0] sm:py-3 block text-center">
                 <span className="block">나도 상담 받아보기</span>
                 <span className="block text-xs">카카오톡</span>
-              </button>
+              </a>
             </div>
           </div>
         </div>
@@ -531,12 +531,12 @@ export default function MobileLanding() {
       <section className="pb-12 pt-8 sm:pb-16 sm:pt-10">
         <div className="mx-auto flex w-full max-w-[420px] flex-col gap-3 px-4 sm:gap-4">
           <div className="grid gap-2 sm:gap-4">
-            <button className="rounded-full bg-gradient-to-b from-[#ff8c42] to-[#ff6b1a] px-5 py-3 text-sm font-semibold text-white shadow-[0px_12px_20px_-10px_rgba(255,107,26,0.7)] sm:py-4 sm:text-base">
+            <a href="https://talk.naver.com/WI2DRB9" target="_blank" rel="noopener noreferrer" className="rounded-full bg-gradient-to-b from-[#ff8c42] to-[#ff6b1a] px-5 py-3 text-sm font-semibold text-white shadow-[0px_12px_20px_-10px_rgba(255,107,26,0.7)] sm:py-4 sm:text-base block text-center">
               상담문의 (네이버 톡톡)
-            </button>
-            <button className="rounded-full bg-gradient-to-b from-[#ff8c42] to-[#ff6b1a] px-5 py-3 text-sm font-semibold text-white shadow-[0px_12px_20px_-10px_rgba(255,107,26,0.7)] sm:py-4 sm:text-base">
+            </a>
+            <a href="https://open.kakao.com/o/st4GSXai" target="_blank" rel="noopener noreferrer" className="rounded-full bg-gradient-to-b from-[#ff8c42] to-[#ff6b1a] px-5 py-3 text-sm font-semibold text-white shadow-[0px_12px_20px_-10px_rgba(255,107,26,0.7)] sm:py-4 sm:text-base block text-center">
               상담문의 (카카오톡)
-            </button>
+            </a>
           </div>
         </div>
       </section>
