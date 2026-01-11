@@ -2,23 +2,31 @@ import Group9 from "../imports/Group9";
 import { useEffect, useState } from "react";
 
 export default function MobileLanding() {
-  const [scale, setScale] = useState(1);
+  // 초기값을 클라이언트 사이드에서만 계산
+  const [scale, setScale] = useState<number | null>(null);
 
   useEffect(() => {
     const updateScale = () => {
       const screenWidth = window.innerWidth;
-      // 888px을 기준으로 스케일 계산
-      if (screenWidth < 888) {
-        setScale(screenWidth / 888);
-      } else {
-        setScale(1);
-      }
+      const calculatedScale = Math.min(1, screenWidth / 888);
+      setScale(calculatedScale);
     };
 
     updateScale();
     window.addEventListener("resize", updateScale);
     return () => window.removeEventListener("resize", updateScale);
   }, []);
+
+  // 스케일이 계산될 때까지 로딩
+  if (scale === null) {
+    return (
+      <div className="min-h-screen bg-[#faf8f5]">
+        <div className="flex items-center justify-center h-screen">
+          <div className="text-center">로딩 중...</div>
+        </div>
+      </div>
+    );
+  }
 
   return (
     <div className="min-h-screen bg-[#faf8f5]">
@@ -28,8 +36,8 @@ export default function MobileLanding() {
           style={{
             width: "888px",
             transform: `scale(${scale})`,
-            transformOrigin: "top left",
-            marginBottom: scale < 1 ? `${(1 - scale) * -100}%` : 0,
+            transformOrigin: "top center",
+            margin: "0 auto",
           }}
         >
           <Group9 />
