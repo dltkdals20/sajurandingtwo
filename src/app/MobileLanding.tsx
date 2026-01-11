@@ -177,24 +177,6 @@ export default function MobileLanding() {
               className="relative z-10 w-full rounded-2xl object-cover shadow-[0px_20px_40px_-20px_rgba(0,0,0,0.35)]"
               src={heroGemini}
             />
-            <img
-              alt=""
-              aria-hidden="true"
-              className="absolute -right-10 bottom-[-12px] w-[150px] opacity-40 sm:w-[200px]"
-              src={heroHorse}
-            />
-            <img
-              alt=""
-              aria-hidden="true"
-              className="absolute -left-6 top-10 w-[80px] opacity-35 sm:w-[110px]"
-              src={heroOrb}
-            />
-            <img
-              alt=""
-              aria-hidden="true"
-              className="absolute right-6 top-6 w-[60px] opacity-60 sm:w-[70px]"
-              src={heroIllustration}
-            />
           </div>
         </div>
       </section>
@@ -465,6 +447,44 @@ export default function MobileLanding() {
                 <p className="mt-3 text-sm leading-6 text-[#666]">{faq.answer}</p>
               </details>
             ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ChatGPT 비교 섹션 */}
+      <section className="bg-[#faf8f5] py-8 sm:py-12">
+        <div className="mx-auto w-full max-w-[420px] px-4">
+          <div className="rounded-[14px] border-2 border-[#ffd6a7] bg-white p-4 shadow-[0px_10px_15px_-3px_rgba(0,0,0,0.1),0px_4px_6px_-4px_rgba(0,0,0,0.1)] sm:p-6">
+            <div className="flex items-center gap-2 sm:gap-3">
+              <div className="flex h-8 w-8 items-center justify-center rounded-[10px] bg-gradient-to-b from-[#ff8c42] to-[#ff6b1a] text-base font-semibold text-white sm:h-9 sm:w-9">
+                !
+              </div>
+              <p className="text-base font-semibold text-[#2d2d2d] sm:text-lg">잠깐!</p>
+            </div>
+            <div className="mt-3 grid gap-4 sm:mt-4 sm:gap-6">
+              <div>
+                <p className="text-sm font-semibold text-[#1e2939] sm:text-base">ChatGPT로 올해 운세를 확인해도 되나요?</p>
+                <p className="mt-2 text-sm leading-6 text-[#666]">
+                  ChatGPT로 사주를 볼 때는 시주·일주·월주·연주 정보가 정확해야 보다 의미 있는 해석이 가능합니다.
+                </p>
+              </div>
+              <div className="relative">
+                <img alt="ChatGPT 예시 이미지" className="w-full rounded-[14px] object-cover" src={reportSample} />
+              </div>
+            </div>
+          </div>
+          <div className="mt-4 rounded-[14px] bg-white p-4 shadow-[0px_10px_15px_-3px_rgba(0,0,0,0.1),0px_4px_6px_-4px_rgba(0,0,0,0.1)] sm:mt-6 sm:p-6">
+            <div className="flex items-center gap-2 sm:gap-3">
+              <span className="rounded-full bg-gradient-to-b from-[#ff8c42] to-[#ff6b1a] px-3 py-1 text-xs font-semibold text-white sm:px-4">
+                예시
+              </span>
+              <p className="text-sm font-semibold text-[#1e2939] sm:text-base">ChatGPT 사주 계산 오차 사례</p>
+            </div>
+            <p className="mt-3 text-sm leading-6 text-[#666] sm:mt-4">
+              본 예시의 경우 실제 일주는 갑인(甲寅) 일주이나, ChatGPT 조회 결과에서는 갑진(甲辰)일주로
+              산출되었습니다. 이처럼 ChatGPT에 생년월일과 출생 시간을 그대로 입력해도 시주·일주·월주·연주가 실제와
+              다르게 계산되는 경우가 발생할 수 있습니다.
+            </p>
           </div>
         </div>
       </section>
