@@ -58,7 +58,10 @@ export default function ContactModal({ isOpen, onClose }: ContactModalProps) {
   };
 
   return (
-    <div className="fixed inset-0 z-50 flex items-center justify-center px-4 py-6">
+    <div
+      className="fixed inset-0 z-50 flex items-center justify-center px-4 py-6"
+      data-role="apply-modal"
+    >
       <div className="absolute inset-0 bg-black/40" onClick={onClose} aria-hidden="true" />
       <div
         role="dialog"
@@ -69,6 +72,7 @@ export default function ContactModal({ isOpen, onClose }: ContactModalProps) {
         <button
           type="button"
           onClick={onClose}
+          data-role="apply-close"
           className="absolute right-4 top-4 rounded-full px-2 py-1 text-sm font-semibold text-[#6a7282] hover:bg-[#f3f4f6]"
           aria-label="닫기"
         >
@@ -90,6 +94,7 @@ export default function ContactModal({ isOpen, onClose }: ContactModalProps) {
               type="text"
               autoComplete="name"
               placeholder="홍길동"
+              data-role="apply-name"
               value={name}
               onChange={(event) => setName(event.target.value)}
               required
@@ -107,6 +112,7 @@ export default function ContactModal({ isOpen, onClose }: ContactModalProps) {
               inputMode="numeric"
               autoComplete="tel"
               placeholder="01012345678"
+              data-role="apply-phone"
               value={phone}
               onChange={(event) => setPhone(event.target.value)}
               required
@@ -150,6 +156,7 @@ export default function ContactModal({ isOpen, onClose }: ContactModalProps) {
           </div>
           <button
             type="submit"
+            data-role="apply-submit"
             disabled={!isConsentChecked}
             className="w-full rounded-full bg-gradient-to-b from-[#ff8c42] to-[#ff6b1a] px-5 py-3 text-sm font-semibold text-white shadow-[0px_12px_20px_-10px_rgba(255,107,26,0.7)] disabled:cursor-not-allowed disabled:opacity-60"
           >
