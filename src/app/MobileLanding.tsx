@@ -14,14 +14,14 @@ import reportSample from "../assets/a0e78955231cc3aa7a9c6dadb5f14246639a415e.png
 import chatGptArt from "../assets/4c36561ae947be65d3a7a735ecac70b6f17ea531.png";
 import counselorImage from "../assets/1fc1d5dd8fc74676cac26d86413d8f7da1b77cc0.png";
 
-const quickHighlights = [
+const highlights = [
   {
     title: "100% 비대면 진행",
     description: "방문 없이, 편하신 시간에 확인하세요.",
   },
   {
-    title: "24시간 내 전달",
-    description: "신청 후 하루 안에 링크로 전달됩니다.",
+    title: "읽기 쉬운 모바일 리포트",
+    description: "어려운 용어는 빼고, 모바일로 읽을 수 있게 url 링크로 보내드립니다.",
   },
 ];
 
@@ -82,7 +82,7 @@ const benefits = [
     number: "2",
     title: "10,000원으로 만나는 정통 사주 명리 분석",
     description:
-      "철학관 방문 비용의 1/3 수준으로, 일간·일주 분석부터 2026년 5대 운세까지 전문적인 사주 해석을 받아보세요.",
+      "철학관 방문 비용의 1/3 수준으로, 일간·일주 분석부터 2026년 5대 운세까지 전문적인 사주 해석을 받아보세요. 합리적인 가격에 깊이 있는 분석을 제공합니다.",
   },
   {
     number: "3",
@@ -98,7 +98,7 @@ const reportCards = [
   { title: "나의 일간 및 일주 분석", image: reportCard3 },
   { title: "나에게 필요한 용신은? 그리고 개운법", image: reportCard4 },
   { title: "2026년 직장 & 사업운", image: reportCard5 },
-  { title: "2026 연인 & 재물 & 건강운", image: reportCard6 },
+  { title: "2026 연인& 재물 & 건강운", image: reportCard6 },
 ];
 
 const steps = [
@@ -113,19 +113,19 @@ const steps = [
     description: "상담 신청 및 간편 결제를 진행해요",
   },
   {
-    number: "3",
+    number: "4",
     title: "사전 질문 전달",
     description: "생년월일/시간(가능 시) + 현재 상황 + 궁금한 항목을 보내주세요",
   },
   {
-    number: "4",
+    number: "5",
     title: "24시간 이내로 해석본 전달",
     description: "24시간 이내에 해석본을 전달드립니다.",
   },
   {
-    number: "5",
-    title: "추가 상담 할인",
-    description: "해석 후 추가 상담이 필요하신 경우, 1만 원 할인된 금액으로 신청하실 수 있습니다.",
+    number: "6",
+    title: "해석 후 추가 상담이 필요하신 경우, 1만 원 할인된 금액으로 신청하실 수 있습니다.",
+    description: "사주 흐름과 타로 리딩으로 2026년 운세 상담이 마무리됩니다",
   },
 ];
 
@@ -149,40 +149,28 @@ const specialties = [
 export default function MobileLanding() {
   return (
     <main className="min-h-screen bg-[#faf8f5] text-[#1e2939]">
-      <section className="relative overflow-hidden bg-gradient-to-b from-[#fff8f0] to-white pb-12 pt-10">
-        <div className="mx-auto flex w-full max-w-[420px] flex-col items-center gap-6 px-4">
-          <div className="flex flex-col items-center gap-4 text-center">
-            <span className="inline-flex w-fit items-center rounded-full bg-white/90 px-3 py-1 text-xs font-semibold text-[#ff6b1a] ring-1 ring-[#ffd7b0]">
-              2026 병오년 신년운세 포함
+      <section className="relative overflow-hidden bg-gradient-to-b from-[#fff8f0] to-white pb-10 pt-10">
+        <div className="mx-auto flex w-full max-w-[420px] flex-col items-center gap-4 px-4 text-center">
+          <span className="inline-flex items-center rounded-full bg-white/90 px-3 py-1 text-xs font-semibold text-[#ff6b1a] ring-1 ring-[#ffd7b0]">
+            (2026 병오년 신년운세 포함)
+          </span>
+          <h1 className="text-[32px] font-semibold leading-[1.15] text-[#2d2d2d]">
+            2026 병오년
+            <br />
+            사주 운세 해석본
+          </h1>
+          <div className="flex flex-wrap items-center justify-center gap-2">
+            <span className="rounded-full bg-gradient-to-b from-[#ff8c42] to-[#ff6b1a] px-4 py-1 text-sm font-semibold text-white">
+              1만원대
             </span>
-            <h1 className="text-[32px] font-semibold leading-[1.15] text-[#2d2d2d]">
-              2026 병오년
-              <br />
-              사주 운세 해석본
-            </h1>
-            <p className="text-[15px] leading-6 text-[#666]">
-              지금 내 흐름을 읽고, 2026년을 덜 흔들리고 더 잘 풀리게 준비합니다.
-            </p>
+            <span className="text-lg font-semibold text-[#2d2d2d]">로 1년 설계</span>
           </div>
-          <div className="flex flex-wrap items-center justify-center gap-3">
-            <span className="text-sm text-[#99a1af] line-through">30,000원</span>
-            <span className="text-[32px] font-semibold text-[#1e2939]">10,000원</span>
-            <span className="rounded-full bg-[#ff7d30] px-3 py-1 text-xs font-semibold text-white">
-              66% 할인
-            </span>
-          </div>
-          <div className="flex w-full flex-col gap-3">
-            <button className="w-full rounded-full bg-gradient-to-b from-[#ff8c42] to-[#ff6b1a] px-5 py-4 text-base font-semibold text-white shadow-[0px_12px_20px_-10px_rgba(255,107,26,0.7)]">
-              상담문의 (네이버 톡톡)
-            </button>
-            <button className="w-full rounded-full bg-white px-5 py-4 text-base font-semibold text-[#ff7d30] ring-1 ring-[#ffd7b0]">
-              상담문의 (카카오 오픈채팅)
-            </button>
-          </div>
-          <div className="rounded-3xl bg-white/70 p-4 text-xs text-[#6a7282]">
-            * 안내사항: 리포트는 신청 후 24시간 이내로 링크로 전달됩니다.
-          </div>
-          <div className="relative mt-2 overflow-hidden rounded-3xl bg-[#fff3e6] p-4 md:p-6">
+          <p className="text-sm leading-6 text-[#666]">
+            지금 내 흐름을 읽고, 2026년을
+            <br />
+            덜 흔들리고 더 잘 풀리게 준비합니다.
+          </p>
+          <div className="relative mt-2 w-full overflow-hidden rounded-3xl bg-[#fff3e6] p-4">
             <img
               alt="2026년 사주 리포트 이미지"
               className="relative z-10 w-full rounded-2xl object-cover shadow-[0px_20px_40px_-20px_rgba(0,0,0,0.35)]"
@@ -191,32 +179,61 @@ export default function MobileLanding() {
             <img
               alt=""
               aria-hidden="true"
-              className="absolute -right-12 bottom-[-10px] w-[220px] opacity-40 md:w-[280px]"
+              className="absolute -right-10 bottom-[-12px] w-[200px] opacity-40"
               src={heroHorse}
             />
             <img
               alt=""
               aria-hidden="true"
-              className="absolute -left-6 top-8 w-[120px] opacity-35 md:w-[160px]"
+              className="absolute -left-6 top-10 w-[110px] opacity-35"
               src={heroOrb}
             />
             <img
               alt=""
               aria-hidden="true"
-              className="absolute right-6 top-6 w-[70px] opacity-60 md:w-[90px]"
+              className="absolute right-6 top-6 w-[70px] opacity-60"
               src={heroIllustration}
             />
           </div>
         </div>
       </section>
 
-      <section className="py-10">
+      <section className="py-8">
+        <div className="mx-auto w-full max-w-[420px] px-4">
+          <div className="rounded-[16px] border-2 border-[#ffb86a] bg-white p-6 shadow-[0px_20px_25px_-5px_rgba(0,0,0,0.1),0px_8px_10px_-6px_rgba(0,0,0,0.1)]">
+            <div className="flex items-center justify-between">
+              <p className="text-lg font-semibold text-[#1e2939]">전통 사주 핵심 리포트</p>
+              <span className="rounded-full bg-[#ff7d30] px-3 py-1 text-xs font-semibold text-white">66% 할인</span>
+            </div>
+            <div className="mt-3 flex items-center gap-3">
+              <span className="text-sm text-[#99a1af] line-through">30,000원</span>
+              <div className="flex items-baseline gap-1">
+                <span className="text-3xl font-semibold text-[#1e2939]">10,000</span>
+                <span className="text-base font-semibold text-[#1e2939]">원</span>
+              </div>
+            </div>
+            <div className="mt-4 rounded-[10px] bg-[#fff7ed] p-4 text-sm text-[#666]">
+              <ul className="space-y-2">
+                <li>✓ 일간,일주,용신,개운법,신년운세(직장,사업,건강,재물,연애운)</li>
+                <li>✓ 네이버 톡톡으로 해석본 전달</li>
+                <li>✓ 24시간 내 전달</li>
+              </ul>
+            </div>
+            <button className="mt-5 w-full rounded-full bg-gradient-to-b from-[#ff8c42] to-[#ff6b1a] px-5 py-4 text-base font-semibold text-white shadow-[0px_12px_20px_-10px_rgba(255,107,26,0.7)]">
+              지금 신청하기
+            </button>
+          </div>
+          <p className="mt-4 text-center text-xs text-[#6a7282]">* 신년 특별 할인은 한정 기간 운영됩니다</p>
+        </div>
+      </section>
+
+      <section className="py-8">
         <div className="mx-auto w-full max-w-[420px] px-4">
           <div className="grid gap-4">
-            {quickHighlights.map((item) => (
+            {highlights.map((item) => (
               <div
                 key={item.title}
-                className="rounded-2xl border-2 border-[#ffe8d6] bg-white p-5 shadow-[0px_4px_6px_-1px_rgba(0,0,0,0.1),0px_2px_4px_-2px_rgba(0,0,0,0.1)]"
+                className="rounded-[16px] border-2 border-[#ffe8d6] bg-white p-5 shadow-[0px_4px_6px_-1px_rgba(0,0,0,0.1),0px_2px_4px_-2px_rgba(0,0,0,0.1)]"
               >
                 <p className="text-base font-semibold text-[#2d2d2d]">{item.title}</p>
                 <p className="mt-2 text-sm leading-6 text-[#666]">{item.description}</p>
@@ -226,29 +243,22 @@ export default function MobileLanding() {
         </div>
       </section>
 
-      <section className="py-6">
+      <section className="py-8">
         <div className="mx-auto w-full max-w-[420px] px-4">
-          <div className="rounded-2xl border-2 border-[#ffb86a] bg-white p-6 shadow-[0px_20px_25px_-5px_rgba(0,0,0,0.1),0px_8px_10px_-6px_rgba(0,0,0,0.1)]">
-            <div className="flex items-center justify-between">
-              <div>
-                <p className="text-lg font-semibold text-[#1e2939]">전통 사주 핵심 리포트</p>
-                <div className="mt-2 flex items-center gap-3">
-                  <span className="text-sm text-[#99a1af] line-through">30,000원</span>
-                  <span className="text-2xl font-semibold text-[#1e2939]">10,000원</span>
-                  <span className="rounded-full bg-[#ff7d30] px-2.5 py-1 text-xs font-semibold text-white">
-                    66% 할인
-                  </span>
-                </div>
-              </div>
+          <div className="rounded-[24px] bg-gradient-to-b from-[#ff8c42] to-[#ff6b1a] px-5 py-6 text-center text-white">
+            <span className="inline-flex items-center rounded-full bg-white/20 px-4 py-1 text-xs">모바일 url 링크 제공</span>
+            <p className="mt-4 text-[36px] font-semibold">10,000원</p>
+            <div className="mt-5 grid gap-3">
+              <button className="rounded-full bg-white px-4 py-3 text-sm font-semibold text-[#ff7d30]">
+                상담문의 (네이버 톡톡)
+              </button>
+              <button className="rounded-full bg-white px-4 py-3 text-sm font-semibold text-[#ff7d30]">
+                상담문의 (카카오 오픈채팅)
+              </button>
             </div>
-            <ul className="mt-4 space-y-2 rounded-2xl bg-[#fff7ed] p-4 text-sm text-[#5b6470]">
-              <li>✓ 일간,일주,용신,개운법,신년운세(직장,사업,건강,재물,연애운)</li>
-              <li>✓ 네이버 톡톡으로 해석본 전달</li>
-              <li>✓ 24시간 내 전달</li>
-            </ul>
-            <button className="mt-5 w-full rounded-full bg-gradient-to-b from-[#ff8c42] to-[#ff6b1a] px-5 py-4 text-base font-semibold text-white shadow-[0px_12px_20px_-10px_rgba(255,107,26,0.7)]">
-              지금 신청하기
-            </button>
+            <p className="mt-4 text-xs text-white/90">
+              * 안내사항: 리포트는 신청 후 24시간 이내로 링크로 전달됩니다.
+            </p>
           </div>
         </div>
       </section>
@@ -257,15 +267,13 @@ export default function MobileLanding() {
         <div className="mx-auto w-full max-w-[420px] px-4">
           <div className="flex flex-col items-center gap-2 text-center">
             <p className="text-2xl font-semibold text-[#2d2d2d]">고객 후기</p>
-            <p className="text-sm text-[#666]">
-              결 상담소의 상담을 받아보신 분들의 생생한 후기입니다.
-            </p>
+            <p className="text-sm text-[#666]">결 상담소의 상담을 받아보신 분들의 생생한 후기입니다.</p>
           </div>
           <div className="mt-6 grid gap-4">
             {reviews.map((review) => (
               <div
                 key={review.name}
-                className="rounded-2xl border border-[#f3f4f6] bg-white p-5 shadow-[0px_4px_6px_-1px_rgba(0,0,0,0.1),0px_2px_4px_-2px_rgba(0,0,0,0.1)]"
+                className="rounded-[16px] border border-[#f3f4f6] bg-white p-5 shadow-[0px_4px_6px_-1px_rgba(0,0,0,0.1),0px_2px_4px_-2px_rgba(0,0,0,0.1)]"
               >
                 <div className="flex items-center justify-between">
                   <div className="flex items-center gap-3">
@@ -274,9 +282,8 @@ export default function MobileLanding() {
                     </div>
                     <span className="text-sm font-semibold text-[#1e2939]">{review.name}</span>
                   </div>
-                  <span className="text-xs text-[#ff7d30]">리뷰</span>
                 </div>
-                <p className="mt-3 text-sm leading-6 text-[#5b6470]">{review.text}</p>
+                <p className="mt-3 text-sm leading-6 text-[#666]">{review.text}</p>
               </div>
             ))}
           </div>
@@ -296,7 +303,7 @@ export default function MobileLanding() {
             {recommendationItems.map((item) => (
               <div
                 key={item.title}
-                className="flex gap-3 rounded-2xl border-2 border-[#ffe8d6] bg-white p-5 shadow-[0px_4px_6px_-1px_rgba(0,0,0,0.1),0px_2px_4px_-2px_rgba(0,0,0,0.1)]"
+                className="flex gap-3 rounded-[16px] border-2 border-[#ffe8d6] bg-white p-5 shadow-[0px_4px_6px_-1px_rgba(0,0,0,0.1),0px_2px_4px_-2px_rgba(0,0,0,0.1)]"
               >
                 <div className="flex h-8 w-8 flex-none items-center justify-center rounded-full bg-[#ff8c42] text-sm font-semibold text-white">
                   ✓
@@ -308,16 +315,18 @@ export default function MobileLanding() {
               </div>
             ))}
           </div>
-          <div className="mt-8 flex flex-col gap-3 rounded-2xl border-2 border-[#ffd6a7] bg-gradient-to-r from-[#fff7ed] to-[#ffedd4] p-5 text-center">
+          <div className="mt-8 flex flex-col gap-3 rounded-[14px] border-2 border-[#ffd6a7] bg-gradient-to-r from-[#fff7ed] to-[#ffedd4] p-5 text-center">
             <p className="text-sm font-semibold text-[#f54900]">
               이미 많은 분들이 사주 운세 해석본으로 2026년 운세를 정리했어요
             </p>
-            <div className="flex flex-col gap-3">
+            <div className="grid gap-3">
               <button className="rounded-full bg-gradient-to-b from-[#ff8c42] to-[#ff6b1a] px-5 py-3 text-sm font-semibold text-white">
-                나도 상담 받아보기 (네이버 톡톡)
+                <span className="block">나도 상담 받아보기</span>
+                <span className="block text-xs">네이버 톡톡</span>
               </button>
               <button className="rounded-full bg-white px-5 py-3 text-sm font-semibold text-[#ff7d30] ring-1 ring-[#ffd7b0]">
-                나도 상담 받아보기 (카카오톡)
+                <span className="block">나도 상담 받아보기</span>
+                <span className="block text-xs">카카오톡</span>
               </button>
             </div>
           </div>
@@ -332,8 +341,11 @@ export default function MobileLanding() {
           </div>
           <div className="mt-6 grid gap-4">
             {benefits.map((benefit) => (
-              <div key={benefit.number} className="flex gap-4 rounded-2xl bg-white p-5 shadow-[0px_10px_18px_-14px_rgba(0,0,0,0.3)]">
-                <div className="flex h-16 w-16 flex-none items-center justify-center rounded-2xl bg-gradient-to-b from-[#ff8c42] to-[#ff6b1a] text-2xl font-semibold text-white">
+              <div
+                key={benefit.number}
+                className="flex gap-4 rounded-[16px] bg-white p-5 shadow-[0px_4px_6px_-1px_rgba(0,0,0,0.1),0px_2px_4px_-2px_rgba(0,0,0,0.1)]"
+              >
+                <div className="flex h-16 w-16 flex-none items-center justify-center rounded-[16px] bg-gradient-to-b from-[#ff8c42] to-[#ff6b1a] text-2xl font-semibold text-white">
                   {benefit.number}
                 </div>
                 <div>
@@ -348,23 +360,27 @@ export default function MobileLanding() {
 
       <section className="py-12">
         <div className="mx-auto w-full max-w-[420px] px-4">
-          <div className="rounded-2xl bg-gradient-to-b from-[#ff8c42] to-[#ff6b1a] p-6 text-center text-white">
+          <div className="rounded-[16px] bg-gradient-to-b from-[#ff8c42] to-[#ff6b1a] p-6 text-center text-white">
             <p className="text-2xl font-semibold">사주에 필요한 내용을 꼭 담았습니다.</p>
             <p className="mt-2 text-sm text-white/90">나의 일간, 일주, 용신, 개운법, 2026 신년운세 까지</p>
           </div>
           <div className="mt-6 grid gap-4">
-            <div className="rounded-2xl bg-white p-5 shadow-[0px_4px_6px_-1px_rgba(0,0,0,0.1),0px_2px_4px_-2px_rgba(0,0,0,0.1)]">
+            <div className="rounded-[16px] bg-white p-5 shadow-[0px_4px_6px_-1px_rgba(0,0,0,0.1),0px_2px_4px_-2px_rgba(0,0,0,0.1)]">
               <p className="text-lg font-semibold text-[#1e2939]">일간 · 일주 분석</p>
               <p className="mt-2 text-sm leading-6 text-[#666]">
-                일간은 사주에서 &apos;나(본체)&apos;를 뜻하는 태어난 날의 천간으로, 내가 원래 어떤 사람인지를
-                보여줍니다. 일주는 타고난 나와 현실에서의 행동 패턴이 만나는 지점입니다.
+                일간은 사주에서 '나(본체)'를 뜻하는 태어난 날의 천간으로, 내가 원래 어떤 사람인지를 보여줍니다.
+                반면 일주는 <span className="text-[#ff8c42]">일간 + 일지</span> 합쳐진 "태어난 날의 기둥"으로, 그 기질이
+                실제 일상에서 어떻게 드러나고 반응하는지(말투, 선택, 관계 방식, 습관)를 함께 보여줍니다. 그래서 일주는
+                '타고난 나(일간)'와 '현실에서의 나(일지)'가 만나는 지점으로 이해되며, 동양에서 성격과 행동 패턴을 읽는
+                심리 진단의 틀로 활용되곤 합니다.
               </p>
             </div>
-            <div className="rounded-2xl border border-[#ffd6a7] bg-white p-5 shadow-[0px_4px_6px_-1px_rgba(0,0,0,0.1),0px_2px_4px_-2px_rgba(0,0,0,0.1)]">
+            <div className="rounded-[16px] border border-[#ffd6a7] bg-white p-5 shadow-[0px_4px_6px_-1px_rgba(0,0,0,0.1),0px_2px_4px_-2px_rgba(0,0,0,0.1)]">
               <p className="text-lg font-semibold text-[#1e2939]">용신 · 개운법</p>
               <p className="mt-2 text-sm leading-6 text-[#666]">
-                용신은 내 사주에 부족한 에너지, 즉 나를 균형있게 만들어주는 필요한 기운입니다. 내게 맞는
-                환경과 행동을 구체적으로 알려드립니다.
+                용신은 내 사주에 부족한 에너지, 즉 나를 균형있게 만들어주는 '필요한 기운'입니다. 개운법을 를 알면 어떤
+                환경, 어떤 색깔, 어떤 행동이 나에게 도움이 되는지 구체적으로 알 수 있고, 을 통해 실생활에서 바로 실행할 수
+                있습니다.
               </p>
               <div className="mt-4 space-y-3">
                 <details className="group rounded-xl bg-[#faf8f5] p-4 text-sm text-[#666] [&>summary::-webkit-details-marker]:hidden">
@@ -417,11 +433,12 @@ export default function MobileLanding() {
                 </details>
               </div>
             </div>
-            <div className="rounded-2xl bg-white p-5 shadow-[0px_4px_6px_-1px_rgba(0,0,0,0.1),0px_2px_4px_-2px_rgba(0,0,0,0.1)]">
+            <div className="rounded-[16px] bg-white p-5 shadow-[0px_4px_6px_-1px_rgba(0,0,0,0.1),0px_2px_4px_-2px_rgba(0,0,0,0.1)]">
               <p className="text-lg font-semibold text-[#1e2939]">2026 신년운세</p>
               <p className="mt-2 text-sm leading-6 text-[#666]">
                 병오년인 2026년, 내게 찾아오는 흐름을 직장운·사업운·재물운·건강운·연애운 5대 영역으로 나누어
-                분석합니다.
+                분석합니다. 올해 특히 조심해야 할 점, 기회가 오는 시기, 지금 당장 실행해야 할 행동까지 구체적으로
+                안내드립니다.
               </p>
             </div>
           </div>
@@ -430,14 +447,14 @@ export default function MobileLanding() {
 
       <section className="py-12">
         <div className="mx-auto w-full max-w-[420px] px-4">
-          <div className="rounded-2xl bg-gradient-to-b from-[#ff8c42] to-[#ff6b1a] p-5 text-center text-white">
+          <div className="rounded-[16px] bg-gradient-to-b from-[#ff8c42] to-[#ff6b1a] p-5 text-center text-white">
             <p className="text-2xl font-semibold">전체 리포트 구성</p>
           </div>
           <div className="mt-6 grid gap-4">
             {reportCards.map((card) => (
               <div
                 key={card.title}
-                className="overflow-hidden rounded-2xl bg-white shadow-[0px_4px_6px_-1px_rgba(0,0,0,0.1),0px_2px_4px_-2px_rgba(0,0,0,0.1)]"
+                className="overflow-hidden rounded-[16px] bg-white shadow-[0px_4px_6px_-1px_rgba(0,0,0,0.1),0px_2px_4px_-2px_rgba(0,0,0,0.1)]"
               >
                 <img alt={card.title} className="h-[240px] w-full object-cover" src={card.image} />
                 <div className="bg-gradient-to-b from-[#ff8c42] to-[#ff6b1a] px-4 py-3 text-sm font-semibold text-white">
@@ -458,8 +475,8 @@ export default function MobileLanding() {
           <div className="mt-6 grid gap-4">
             {steps.map((step) => (
               <div
-                key={step.number}
-                className="flex gap-4 rounded-2xl bg-white p-5 shadow-[0px_4px_6px_-1px_rgba(0,0,0,0.1),0px_2px_4px_-2px_rgba(0,0,0,0.1)]"
+                key={step.title}
+                className="flex gap-4 rounded-[16px] bg-white p-5 shadow-[0px_4px_6px_-1px_rgba(0,0,0,0.1),0px_2px_4px_-2px_rgba(0,0,0,0.1)]"
               >
                 <div className="flex h-12 w-12 flex-none items-center justify-center rounded-full bg-gradient-to-r from-[#ff6900] to-[#f54900] text-base font-semibold text-white">
                   {step.number}
@@ -484,7 +501,7 @@ export default function MobileLanding() {
             {faqs.map((faq) => (
               <details
                 key={faq.question}
-                className="group rounded-2xl bg-white p-5 shadow-[0px_4px_6px_-1px_rgba(0,0,0,0.1),0px_2px_4px_-2px_rgba(0,0,0,0.1)] [&>summary::-webkit-details-marker]:hidden"
+                className="group rounded-[16px] bg-white p-5 shadow-[0px_4px_6px_-1px_rgba(0,0,0,0.1),0px_2px_4px_-2px_rgba(0,0,0,0.1)] [&>summary::-webkit-details-marker]:hidden"
               >
                 <summary className="flex cursor-pointer list-none items-center justify-between text-sm font-semibold text-[#1e2939]">
                   {faq.question}
@@ -499,9 +516,9 @@ export default function MobileLanding() {
 
       <section className="bg-[#faf8f5] py-12">
         <div className="mx-auto w-full max-w-[420px] px-4">
-          <div className="rounded-2xl border-2 border-[#ffd6a7] bg-white p-6 shadow-[0px_10px_15px_-3px_rgba(0,0,0,0.1),0px_4px_6px_-4px_rgba(0,0,0,0.1)]">
+          <div className="rounded-[14px] border-2 border-[#ffd6a7] bg-white p-6 shadow-[0px_10px_15px_-3px_rgba(0,0,0,0.1),0px_4px_6px_-4px_rgba(0,0,0,0.1)]">
             <div className="flex items-center gap-3">
-              <div className="flex h-9 w-9 items-center justify-center rounded-xl bg-gradient-to-b from-[#ff8c42] to-[#ff6b1a] text-white">
+              <div className="flex h-9 w-9 items-center justify-center rounded-[10px] bg-gradient-to-b from-[#ff8c42] to-[#ff6b1a] text-white">
                 !
               </div>
               <p className="text-lg font-semibold text-[#2d2d2d]">잠깐!</p>
@@ -512,23 +529,19 @@ export default function MobileLanding() {
                 <p className="mt-3 text-sm leading-6 text-[#666]">
                   ChatGPT로 사주를 볼 때는 시주·일주·월주·연주 정보가 정확해야 보다 의미 있는 해석이 가능합니다.
                 </p>
-                <p className="mt-3 text-sm leading-6 text-[#666]">
-                  이처럼 ChatGPT에 생년월일과 출생 시간을 그대로 입력해도 실제와 다르게 계산되는 경우가 발생할 수
-                  있습니다. 정확한 사주(명식) 조회가 가능한 전문가와 상담을 권장드립니다.
-                </p>
               </div>
               <div className="relative">
-                <img alt="ChatGPT 예시 이미지" className="w-full rounded-2xl object-cover" src={reportSample} />
+                <img alt="ChatGPT 예시 이미지" className="w-full rounded-[14px] object-cover" src={reportSample} />
                 <img
                   alt=""
                   aria-hidden="true"
-                  className="absolute -left-10 -bottom-8 w-[160px] opacity-70"
+                  className="absolute -left-8 -bottom-6 w-[150px] opacity-70"
                   src={chatGptArt}
                 />
               </div>
             </div>
           </div>
-          <div className="mt-8 rounded-2xl bg-white p-6 shadow-[0px_10px_15px_-3px_rgba(0,0,0,0.1),0px_4px_6px_-4px_rgba(0,0,0,0.1)]">
+          <div className="mt-8 rounded-[14px] bg-white p-6 shadow-[0px_10px_15px_-3px_rgba(0,0,0,0.1),0px_4px_6px_-4px_rgba(0,0,0,0.1)]">
             <div className="flex items-center gap-3">
               <span className="rounded-full bg-gradient-to-b from-[#ff8c42] to-[#ff6b1a] px-4 py-1 text-xs font-semibold text-white">
                 예시
@@ -538,7 +551,8 @@ export default function MobileLanding() {
             <p className="mt-4 text-sm leading-6 text-[#666]">
               본 예시의 경우 실제 일주는 갑인(甲寅) 일주이나, ChatGPT 조회 결과에서는 갑진(甲辰)일주로
               산출되었습니다. 이처럼 ChatGPT에 생년월일과 출생 시간을 그대로 입력해도 시주·일주·월주·연주가 실제와
-              다르게 계산되는 경우가 발생할 수 있습니다.
+              다르게 계산되는 경우가 발생할 수 있습니다. 사주 해석은 기초가 되는 명식의 정확도가 매우 중요하므로,
+              정확한 사주(명식) 조회가 가능한 전문가와 상담을 진행해 보시기를 권장드립니다.
             </p>
           </div>
         </div>
@@ -546,25 +560,21 @@ export default function MobileLanding() {
 
       <section className="bg-[#faf8f5] py-12">
         <div className="mx-auto w-full max-w-[420px] px-4">
-          <div className="grid gap-8 rounded-2xl bg-white p-6 shadow-[0px_10px_15px_-3px_rgba(0,0,0,0.1),0px_4px_6px_-4px_rgba(0,0,0,0.1)]">
-            <img
-              alt="결쌤 상담소 소개 이미지"
-              className="h-[240px] w-full rounded-2xl object-cover"
-              src={counselorImage}
-            />
+          <div className="grid gap-8 rounded-[16px] bg-white p-6 shadow-[0px_10px_15px_-3px_rgba(0,0,0,0.1),0px_4px_6px_-4px_rgba(0,0,0,0.1)]">
+            <img alt="결쌤 상담소 소개 이미지" className="h-[240px] w-full rounded-[16px] object-cover" src={counselorImage} />
             <div>
               <p className="text-xs font-semibold text-[#6a7282]">COUNSELOR INTRODUCTION</p>
               <h2 className="mt-2 text-2xl font-semibold text-[#0a0a0a]">
-                당신의 고운한 &apos;결&apos;을 읽어드리는 <span className="text-[#e8a055]">결쌤 상담소</span>입니다.
+                당신의 고운한 '결'을 읽어드리는 <span className="text-[#e8a055]">결쌤 상담소</span>입니다.
               </h2>
               <p className="mt-3 text-sm leading-6 text-[#666]">
                 운명은 정해진 것이 아니라, 내가 어떤 선택을 하느냐에 따라 달라집니다. 만연한 불안감 속에서
-                흔들리고 있다면, 이제 당신만의 &apos;결&apos;대로 살아가는 방법을 이야기 나눌 시간입니다.
+                흔들리고 있다면, 이제 당신만의 '결'대로 살아가는 방법을 이야기 나눠 시간입니다.
               </p>
               <p className="mt-3 text-sm text-[#666]">동양 도구: 정통 사주명리, 타로 심리</p>
               <p className="mt-1 text-sm text-[#666]">심리 도구: TCI (기질/성격), 홀랜드 (진로/적성)</p>
               <p className="mt-4 text-sm font-semibold text-[#1e2939]">전문 분야</p>
-              <div className="mt-2 space-y-2 rounded-2xl bg-[#faf8f5] p-4 text-sm text-[#666]">
+              <div className="mt-2 space-y-2 rounded-[16px] bg-[#faf8f5] p-4 text-sm text-[#666]">
                 {specialties.map((item) => (
                   <div key={item} className="flex gap-2">
                     <span>🔍</span>
@@ -594,16 +604,8 @@ export default function MobileLanding() {
             </button>
           </div>
           <div className="grid gap-4">
-            <img
-              alt="추천 이미지"
-              className="h-[220px] w-full rounded-2xl object-cover"
-              src={friendIllustration}
-            />
-            <img
-              alt="혜택 이미지"
-              className="h-[220px] w-full rounded-2xl object-cover"
-              src={friendIllustration2}
-            />
+            <img alt="추천 이미지" className="h-[220px] w-full rounded-[16px] object-cover" src={friendIllustration} />
+            <img alt="혜택 이미지" className="h-[220px] w-full rounded-[16px] object-cover" src={friendIllustration2} />
           </div>
         </div>
       </section>
