@@ -502,7 +502,11 @@ export default function MobileLanding() {
             <p className="mt-3 text-sm leading-6 text-[#666] sm:mt-4">
               본 예시의 경우 실제 일주는 갑인(甲寅) 일주이나, ChatGPT 조회 결과에서는 갑진(甲辰)일주로
               산출되었습니다. 이처럼 ChatGPT에 생년월일과 출생 시간을 그대로 입력해도 시주·일주·월주·연주가 실제와
-              다르게 계산되는 경우가 발생할 수 있습니다.
+              다르게 계산되는 경우가 발생할 수 있습니다. 사주 해석은 기초가 되는 명식의 정확도가 매우 중요하므로,
+              정확한 사주(명식) 조회가 가능한{" "}
+              <span className="underline decoration-[#ff8c42] decoration-2 underline-offset-2">
+                전문가와 상담을 진행해 보시기를 권장드립니다.
+              </span>
             </p>
           </div>
         </div>
