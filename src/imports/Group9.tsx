@@ -1,5 +1,7 @@
 import svgPaths from "./svg-lttqylhvcw";
 import clsx from "clsx";
+import { useState } from "react";
+import ContactModal from "../app/ContactModal";
 import imgImage from "figma:asset/53e8a7fccf8babba7f93e9039ab3ed7387b0357a.png";
 import imgA3DRenderedDigitalIllustrationOfALargeGlo8 from "figma:asset/992b32e06699ae77ca01c46bbfbac360c7c4c491.png";
 import imgA2DDigitalIllustrationFeaturesTwoBoldDoubl1 from "figma:asset/c19b998616706e20148c0ec6f87a223207b3c673.png";
@@ -487,21 +489,25 @@ function TextText6({ text, additionalClassNames = "" }: TextText6Props) {
 }
 type ButtonProps = {
   text: string;
-  text1: string;
+  text1?: string;
+  onClick?: () => void;
   additionalClassNames?: string;
 };
 
-function Button({ text, text1, additionalClassNames = "" }: ButtonProps) {
-  const isNaver = text1.includes("네이버") || text1 === "네이버 톡톡";
-  const href = isNaver ? "https://talk.naver.com/WI2DRB9" : "https://open.kakao.com/o/st4GSXai";
+function Button({ text, text1, onClick, additionalClassNames = "" }: ButtonProps) {
+  const hasSecondaryText = Boolean(text1);
   
   return (
-    <a href={href} target="_blank" rel="noopener noreferrer" onClick={() => (window as any).fbq?.('track', 'Contact')} className={clsx("absolute bg-gradient-to-r from-[#ff6900] h-[62px] rounded-[10px] shadow-[0px_4px_6px_-1px_rgba(0,0,0,0.1),0px_2px_4px_-2px_rgba(0,0,0,0.1)] to-[#f54900] top-[93px] w-[183px] flex items-center justify-center cursor-pointer", additionalClassNames)}>
-      <div className="absolute font-['Inter:Medium','Noto_Sans_KR:Medium',sans-serif] font-medium leading-[24px] left-[91px] not-italic text-[16px] text-center text-nowrap text-white top-[11.5px] tracking-[-0.3125px] translate-x-[-50%]">
+    <button
+      type="button"
+      onClick={onClick}
+      className={clsx("absolute bg-gradient-to-r from-[#ff6900] h-[62px] rounded-[10px] shadow-[0px_4px_6px_-1px_rgba(0,0,0,0.1),0px_2px_4px_-2px_rgba(0,0,0,0.1)] to-[#f54900] top-[93px] w-[183px] flex items-center justify-center cursor-pointer", additionalClassNames)}
+    >
+      <div className={clsx("absolute font-['Inter:Medium','Noto_Sans_KR:Medium',sans-serif] font-medium leading-[24px] left-[91px] not-italic text-[16px] text-center text-nowrap text-white tracking-[-0.3125px] translate-x-[-50%]", hasSecondaryText ? "top-[11.5px]" : "top-[19px]")}>
         <p className="mb-0">{text}</p>
-        <p>{text1}</p>
+        {hasSecondaryText ? <p>{text1}</p> : null}
       </div>
-    </a>
+    </button>
   );
 }
 type ParagraphText2Props = {
@@ -648,13 +654,18 @@ function ContainerText({ text }: ContainerTextProps) {
 }
 type ButtonTextProps = {
   text: string;
+  onClick?: () => void;
 };
 
-function ButtonText({ text }: ButtonTextProps) {
+function ButtonText({ text, onClick }: ButtonTextProps) {
   return (
-    <a href="https://open.kakao.com/o/st4GSXai" target="_blank" rel="noopener noreferrer" onClick={() => (window as any).fbq?.('track', 'Contact')} className="absolute bg-gradient-to-r from-[#ff6900] h-[60px] left-[32px] rounded-[14px] to-[#f54900] top-[429px] w-[380px] flex items-center justify-center cursor-pointer">
+    <button
+      type="button"
+      onClick={onClick}
+      className="absolute bg-gradient-to-r from-[#ff6900] h-[60px] left-[32px] rounded-[14px] to-[#f54900] top-[429px] w-[380px] flex items-center justify-center cursor-pointer"
+    >
       <p className="absolute font-['Inter:Semi_Bold','Noto_Sans_KR:Bold',sans-serif] font-semibold leading-[28px] left-[190.14px] not-italic text-[18px] text-center text-nowrap text-white top-[16px] tracking-[-0.4395px] translate-x-[-50%]">{text}</p>
-    </a>
+    </button>
   );
 }
 type Paragraph1Props = {
@@ -772,8 +783,18 @@ function Container2() {
 }
 
 export default function Group() {
+  const [isContactOpen, setIsContactOpen] = useState(false);
+
+  const openContactModal = () => {
+    (window as any).fbq?.("track", "Contact");
+    setIsContactOpen(true);
+  };
+
+  const closeContactModal = () => setIsContactOpen(false);
+
   return (
     <div className="relative size-full">
+      <ContactModal isOpen={isContactOpen} onClose={closeContactModal} />
       <div className="absolute bg-gradient-to-b from-[#fff8f0] h-[1486.618px] left-0 to-white top-0 w-[888px]" data-name="Section">
         <div className="absolute bg-gradient-to-b content-stretch flex flex-col from-[#fff7ed] h-[803px] items-start left-px pb-0 pt-[64px] px-0 to-white top-[8148px] w-[883px]" data-name="Pricing">
           <div className="h-[645px] relative shrink-0 w-full" data-name="Container">
@@ -798,7 +819,7 @@ export default function Group() {
                   <TextText4 text="24시간 내 전달" additionalClassNames="w-[136.25px]" />
                 </div>
               </div>
-              <ButtonText text="지금 신청하기" />
+              <ButtonText text="지금 신청하기" onClick={openContactModal} />
               <ContainerText text="66% 할인" />
             </div>
             <div className="absolute h-[20px] left-[32px] top-[625px] w-[796px]" data-name="Paragraph">
@@ -901,20 +922,14 @@ export default function Group() {
                   <div className="absolute h-[57.594px] left-[13px] top-[73px] w-[684px]" data-name="Paragraph">
                     <p className="absolute font-['Inter:Regular','Noto_Sans_KR:Regular',sans-serif] font-normal leading-[57.6px] left-[calc(50%+0.5px)] not-italic text-[48px] text-center text-nowrap text-white top-0 tracking-[0.8316px] translate-x-[-50%]">10,000원</p>
                   </div>
-                  <a href="https://talk.naver.com/WI2DRB9" target="_blank" rel="noopener noreferrer" onClick={() => (window as any).fbq?.('track', 'Contact')} className="absolute bg-white h-[60px] left-[calc(50%-134.82px)] rounded-[1.67772e+07px] top-[150.64px] translate-x-[-50%] w-[270.352px] flex items-center justify-center cursor-pointer hover:bg-gray-50" data-name="Button">
-                    <p className="absolute font-['Inter:Medium','Noto_Sans_KR:Medium',sans-serif] font-medium leading-[28px] left-[calc(50%-0.18px)] not-italic text-[#ff7d30] text-[20px] text-center text-nowrap top-[16px] tracking-[-0.8492px] translate-x-[-50%]">상담문의 (네이버 톡톡)</p>
-                  </a>
-                  <a href="https://open.kakao.com/o/st4GSXai" target="_blank" rel="noopener noreferrer" onClick={() => (window as any).fbq?.('track', 'Contact')} className="absolute bg-white h-[60px] left-[calc(50%+151.18px)] rounded-[1.67772e+07px] top-[151.64px] translate-x-[-50%] w-[270.352px] flex items-center justify-center cursor-pointer hover:bg-gray-50" data-name="Button">
-                    <p className="absolute font-['Inter:Medium','Noto_Sans_KR:Medium',sans-serif] font-medium leading-[28px] left-[136.5px] not-italic text-[#ff7d30] text-[20px] text-center text-nowrap top-[16px] tracking-[-0.8492px] translate-x-[-50%]">상담문의 (카카오 오픈채팅)</p>
-                    <div className="absolute left-[224.35px] size-[24px] top-[18px]" data-name="Icon" />
-                    <div className="absolute inset-[38.33%_2.72%_38.33%_94.69%]" data-name="Vector">
-                      <div className="absolute inset-[-7.14%_-14.29%]">
-                        <svg className="block size-full" fill="none" preserveAspectRatio="none" viewBox="0 0 9 16">
-                          <path d="M1 1L8 8L1 15" id="Vector" stroke="var(--stroke-0, #FFF9F3)" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" />
-                        </svg>
-                      </div>
-                    </div>
-                  </a>
+                  <button
+                    type="button"
+                    onClick={openContactModal}
+                    className="absolute bg-white h-[60px] left-1/2 rounded-[1.67772e+07px] top-[150.64px] translate-x-[-50%] w-[270.352px] flex items-center justify-center cursor-pointer hover:bg-gray-50"
+                    data-name="Button"
+                  >
+                    <p className="absolute font-['Inter:Medium','Noto_Sans_KR:Medium',sans-serif] font-medium leading-[28px] left-[calc(50%-0.18px)] not-italic text-[#ff7d30] text-[20px] text-center text-nowrap top-[16px] tracking-[-0.8492px] translate-x-[-50%]">신청하기</p>
+                  </button>
                   <div className="absolute h-[20px] left-[-150px] top-[270px] w-[684px]" data-name="Paragraph" />
                   <div className="absolute font-['Inter:Regular','Noto_Sans_KR:Regular',sans-serif] font-normal leading-[20px] left-[calc(50%+14.5px)] not-italic text-[14px] text-[rgba(255,255,255,0.9)] text-center text-nowrap top-[240px] tracking-[-0.2904px] translate-x-[-50%]">
                     <p className="mb-0">{`* 안내사항: 리포트는 신청 후 24시간 `}</p>
@@ -1097,8 +1112,7 @@ export default function Group() {
                     </div>
                     <p className="absolute font-['Inter:Regular','Noto_Sans_KR:Regular',sans-serif] font-normal leading-[28px] left-1/2 not-italic text-[#364153] text-[18px] text-center text-nowrap top-[28px] tracking-[-0.4395px] translate-x-[-50%]">2026년 운세를 정리했어요</p>
                   </div>
-                  <Button text="나도 상담 받아보기" text1="네이버 톡톡" additionalClassNames="left-[224.14px]" />
-                  <Button text="나도 상담 받아보기" text1="카카오톡" additionalClassNames="left-[414.14px]" />
+                  <Button text="신청하기" onClick={openContactModal} additionalClassNames="left-1/2 -translate-x-1/2" />
                 </div>
                 <div className="absolute contents left-[49px] top-[1516px]">
                   <div className="absolute h-[201px] left-[49px] top-[1516px] w-[302px]" data-name="A_3D-rendered_digital_illustration_features_a_frie 1">
@@ -1496,14 +1510,14 @@ export default function Group() {
                   </FaqItem>
                 </div>
                 <div className="absolute bg-[#faf8f5] h-[237.834px] left-0 top-[9675px] w-[888px]" data-name="Section" />
-                <a href="https://talk.naver.com/WI2DRB9" target="_blank" rel="noopener noreferrer" onClick={() => (window as any).fbq?.('track', 'Contact')} className="absolute bg-gradient-to-b from-[#ff8c42] h-[76px] left-[42px] rounded-[16px] shadow-[0px_10px_15px_-3px_rgba(0,0,0,0.1),0px_4px_6px_-4px_rgba(0,0,0,0.1)] to-[#ff6b1a] top-[10775px] w-[792px] flex items-center justify-center cursor-pointer" data-name="Button">
-                  <p className="absolute font-['Inter:Medium','Noto_Sans_KR:Medium',sans-serif] font-medium leading-[28px] left-[365.82px] not-italic text-[20px] text-center text-nowrap text-white top-[24px] tracking-[-0.8492px] translate-x-[-50%]">상담문의 (네이버 톡톡)</p>
-                  <Icon3 additionalClassNames="left-[461.17px]" />
-                </a>
-                <a href="https://open.kakao.com/o/st4GSXai" target="_blank" rel="noopener noreferrer" onClick={() => (window as any).fbq?.('track', 'Contact')} className="absolute bg-gradient-to-b from-[#ff8c42] h-[76px] left-[42px] rounded-[16px] shadow-[0px_10px_15px_-3px_rgba(0,0,0,0.1),0px_4px_6px_-4px_rgba(0,0,0,0.1)] to-[#ff6b1a] top-[10859px] w-[792px] flex items-center justify-center cursor-pointer" data-name="Button">
-                  <p className="absolute font-['Inter:Medium','Noto_Sans_KR:Medium',sans-serif] font-medium leading-[28px] left-1/2 not-italic text-[20px] text-center text-nowrap text-white top-[24px] tracking-[-0.8492px] translate-x-[-50%]">상담문의 (카카오톡)</p>
-                  <Icon3 additionalClassNames="left-[476px]" />
-                </a>
+                <button
+                  type="button"
+                  onClick={openContactModal}
+                  className="absolute bg-gradient-to-b from-[#ff8c42] h-[76px] left-[42px] rounded-[16px] shadow-[0px_10px_15px_-3px_rgba(0,0,0,0.1),0px_4px_6px_-4px_rgba(0,0,0,0.1)] to-[#ff6b1a] top-[10775px] w-[792px] flex items-center justify-center cursor-pointer"
+                  data-name="Button"
+                >
+                  <p className="absolute font-['Inter:Medium','Noto_Sans_KR:Medium',sans-serif] font-medium leading-[28px] left-1/2 not-italic text-[24px] text-center text-nowrap text-white top-[22px] tracking-[-0.8492px] translate-x-[-50%]">신청하기</p>
+                </button>
                 <ContainerText2 text="잠깐!" additionalClassNames="left-[334px] top-[7845px]" />
                 <div className="absolute bg-white border-2 border-[#ffd6a7] border-solid h-[456px] left-[452px] rounded-[14px] shadow-[0px_1px_3px_0px_rgba(0,0,0,0.1),0px_1px_2px_-1px_rgba(0,0,0,0.1)] top-[8010px] w-[385px]" data-name="Container">
                   <div className="absolute bg-gradient-to-b content-stretch flex from-[#ff8c42] items-center justify-center left-[18px] pl-0 pr-[0.008px] py-0 rounded-[10px] size-[32px] to-[#ff6b1a] top-[24px]" data-name="Container">
@@ -1543,7 +1557,7 @@ export default function Group() {
                       <TextText4 text="24시간 내 전달" additionalClassNames="w-[136.25px]" />
                     </div>
                   </div>
-                  <ButtonText text="지금 신청하기" />
+                  <ButtonText text="지금 신청하기" onClick={openContactModal} />
                   <ContainerText text="66% 할인" />
                 </div>
                 <div className="absolute h-[495px] left-[14px] top-[7952px] w-[414px]" data-name="A_3D-rendered_animated_GIF_features_a_cartoon-styl 1">
