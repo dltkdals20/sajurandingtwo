@@ -898,10 +898,10 @@ export default function Group() {
                   <div className="absolute h-[57.594px] left-[13px] top-[73px] w-[684px]" data-name="Paragraph">
                     <p className="absolute font-['Inter:Regular','Noto_Sans_KR:Regular',sans-serif] font-normal leading-[57.6px] left-[calc(50%+0.5px)] not-italic text-[48px] text-center text-nowrap text-white top-0 tracking-[0.8316px] translate-x-[-50%]">10,000원</p>
                   </div>
-                  <div className="absolute bg-white h-[60px] left-[calc(50%-134.82px)] rounded-[1.67772e+07px] top-[150.64px] translate-x-[-50%] w-[270.352px]" data-name="Button">
+                  <a href="https://talk.naver.com/WI2DRB9" target="_blank" rel="noopener noreferrer" onClick={() => (window as any).fbq?.('track', 'Contact')} className="absolute bg-white h-[60px] left-[calc(50%-134.82px)] rounded-[1.67772e+07px] top-[150.64px] translate-x-[-50%] w-[270.352px] flex items-center justify-center cursor-pointer hover:bg-gray-50" data-name="Button">
                     <p className="absolute font-['Inter:Medium','Noto_Sans_KR:Medium',sans-serif] font-medium leading-[28px] left-[calc(50%-0.18px)] not-italic text-[#ff7d30] text-[20px] text-center text-nowrap top-[16px] tracking-[-0.8492px] translate-x-[-50%]">상담문의 (네이버 톡톡)</p>
-                  </div>
-                  <div className="absolute bg-white h-[60px] left-[calc(50%+151.18px)] rounded-[1.67772e+07px] top-[151.64px] translate-x-[-50%] w-[270.352px]" data-name="Button">
+                  </a>
+                  <a href="https://open.kakao.com/o/st4GSXai" target="_blank" rel="noopener noreferrer" onClick={() => (window as any).fbq?.('track', 'Contact')} className="absolute bg-white h-[60px] left-[calc(50%+151.18px)] rounded-[1.67772e+07px] top-[151.64px] translate-x-[-50%] w-[270.352px] flex items-center justify-center cursor-pointer hover:bg-gray-50" data-name="Button">
                     <p className="absolute font-['Inter:Medium','Noto_Sans_KR:Medium',sans-serif] font-medium leading-[28px] left-[136.5px] not-italic text-[#ff7d30] text-[20px] text-center text-nowrap top-[16px] tracking-[-0.8492px] translate-x-[-50%]">상담문의 (카카오 오픈채팅)</p>
                     <div className="absolute left-[224.35px] size-[24px] top-[18px]" data-name="Icon" />
                     <div className="absolute inset-[38.33%_2.72%_38.33%_94.69%]" data-name="Vector">
@@ -911,7 +911,7 @@ export default function Group() {
                         </svg>
                       </div>
                     </div>
-                  </div>
+                  </a>
                   <div className="absolute h-[20px] left-[-150px] top-[270px] w-[684px]" data-name="Paragraph" />
                   <div className="absolute font-['Inter:Regular','Noto_Sans_KR:Regular',sans-serif] font-normal leading-[20px] left-[calc(50%+14.5px)] not-italic text-[14px] text-[rgba(255,255,255,0.9)] text-center text-nowrap top-[240px] tracking-[-0.2904px] translate-x-[-50%]">
                     <p className="mb-0">{`* 안내사항: 리포트는 신청 후 24시간 `}</p>
