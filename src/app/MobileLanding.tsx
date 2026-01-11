@@ -151,6 +151,8 @@ export default function MobileLanding() {
     <main className="min-h-screen bg-[#faf8f5] text-[#1e2939]">
       {/* 히어로 섹션 */}
       <section className="relative overflow-hidden bg-gradient-to-b from-[#fff8f0] to-white pb-8 pt-8 sm:pb-10 sm:pt-10">
+        {/* 장식 요소 */}
+        <div className="absolute right-4 top-6 text-3xl opacity-40 sm:right-6 sm:top-8 sm:text-4xl">⭐</div>
         <div className="mx-auto flex w-full max-w-[420px] flex-col items-center gap-3 px-4 text-center sm:gap-4">
           <span className="inline-flex items-center rounded-full bg-white/90 px-3 py-1 text-xs font-semibold text-[#ff6b1a] ring-1 ring-[#ffd7b0]">
             (2026 병오년 신년운세 포함)
@@ -278,8 +280,10 @@ export default function MobileLanding() {
       </section>
 
       {/* 추천 대상 섹션 */}
-      <section className="py-8 sm:py-12">
+      <section className="relative py-8 sm:py-12">
         <div className="mx-auto w-full max-w-[420px] px-4">
+          {/* 장식 별 */}
+          <div className="absolute right-6 top-6 text-xl sm:right-8 sm:top-8 sm:text-2xl">⭐</div>
           <div className="flex items-center gap-2 sm:gap-3">
             <div className="h-px flex-1 bg-[#ffe1c2]" />
             <span className="rounded-full bg-gradient-to-r from-[#ff6900] to-[#f54900] px-4 py-2 text-sm font-semibold text-white sm:px-5">
@@ -514,10 +518,10 @@ export default function MobileLanding() {
                 ))}
               </div>
             </div>
-            {/* 하단 이미지 */}
-            <div className="grid gap-2 sm:gap-4">
-              <img alt="추천 이미지" className="h-[100px] w-full rounded-[16px] object-cover sm:h-[220px]" src={friendIllustration} />
-              <img alt="혜택 이미지" className="h-[100px] w-full rounded-[16px] object-cover sm:h-[220px]" src={friendIllustration2} />
+            {/* 하단 이미지 - 웹에서만 표시 */}
+            <div className="hidden grid gap-2 sm:grid sm:gap-4">
+              <img alt="추천 이미지" className="h-[220px] w-full rounded-[16px] object-cover" src={friendIllustration} />
+              <img alt="혜택 이미지" className="h-[220px] w-full rounded-[16px] object-cover" src={friendIllustration2} />
             </div>
           </div>
         </div>
