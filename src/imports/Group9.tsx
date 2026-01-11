@@ -492,13 +492,16 @@ type ButtonProps = {
 };
 
 function Button({ text, text1, additionalClassNames = "" }: ButtonProps) {
+  const isNaver = text1.includes("네이버") || text1 === "네이버 톡톡";
+  const href = isNaver ? "https://talk.naver.com/WI2DRB9" : "https://open.kakao.com/o/st4GSXai";
+  
   return (
-    <div className={clsx("absolute bg-gradient-to-r from-[#ff6900] h-[62px] rounded-[10px] shadow-[0px_4px_6px_-1px_rgba(0,0,0,0.1),0px_2px_4px_-2px_rgba(0,0,0,0.1)] to-[#f54900] top-[93px] w-[183px]", additionalClassNames)}>
+    <a href={href} target="_blank" rel="noopener noreferrer" onClick={() => (window as any).fbq?.('track', 'Contact')} className={clsx("absolute bg-gradient-to-r from-[#ff6900] h-[62px] rounded-[10px] shadow-[0px_4px_6px_-1px_rgba(0,0,0,0.1),0px_2px_4px_-2px_rgba(0,0,0,0.1)] to-[#f54900] top-[93px] w-[183px] flex items-center justify-center cursor-pointer", additionalClassNames)}>
       <div className="absolute font-['Inter:Medium','Noto_Sans_KR:Medium',sans-serif] font-medium leading-[24px] left-[91px] not-italic text-[16px] text-center text-nowrap text-white top-[11.5px] tracking-[-0.3125px] translate-x-[-50%]">
         <p className="mb-0">{text}</p>
         <p>{text1}</p>
       </div>
-    </div>
+    </a>
   );
 }
 type ParagraphText2Props = {
@@ -649,9 +652,9 @@ type ButtonTextProps = {
 
 function ButtonText({ text }: ButtonTextProps) {
   return (
-    <div className="absolute bg-gradient-to-r from-[#ff6900] h-[60px] left-[32px] rounded-[14px] to-[#f54900] top-[429px] w-[380px]">
+    <a href="https://open.kakao.com/o/st4GSXai" target="_blank" rel="noopener noreferrer" onClick={() => (window as any).fbq?.('track', 'Contact')} className="absolute bg-gradient-to-r from-[#ff6900] h-[60px] left-[32px] rounded-[14px] to-[#f54900] top-[429px] w-[380px] flex items-center justify-center cursor-pointer">
       <p className="absolute font-['Inter:Semi_Bold','Noto_Sans_KR:Bold',sans-serif] font-semibold leading-[28px] left-[190.14px] not-italic text-[18px] text-center text-nowrap text-white top-[16px] tracking-[-0.4395px] translate-x-[-50%]">{text}</p>
-    </div>
+    </a>
   );
 }
 type Paragraph1Props = {
@@ -1493,14 +1496,14 @@ export default function Group() {
                   </FaqItem>
                 </div>
                 <div className="absolute bg-[#faf8f5] h-[237.834px] left-0 top-[9675px] w-[888px]" data-name="Section" />
-                <div className="absolute bg-gradient-to-b from-[#ff8c42] h-[76px] left-[42px] rounded-[16px] shadow-[0px_10px_15px_-3px_rgba(0,0,0,0.1),0px_4px_6px_-4px_rgba(0,0,0,0.1)] to-[#ff6b1a] top-[10775px] w-[792px]" data-name="Button">
+                <a href="https://talk.naver.com/WI2DRB9" target="_blank" rel="noopener noreferrer" onClick={() => (window as any).fbq?.('track', 'Contact')} className="absolute bg-gradient-to-b from-[#ff8c42] h-[76px] left-[42px] rounded-[16px] shadow-[0px_10px_15px_-3px_rgba(0,0,0,0.1),0px_4px_6px_-4px_rgba(0,0,0,0.1)] to-[#ff6b1a] top-[10775px] w-[792px] flex items-center justify-center cursor-pointer" data-name="Button">
                   <p className="absolute font-['Inter:Medium','Noto_Sans_KR:Medium',sans-serif] font-medium leading-[28px] left-[365.82px] not-italic text-[20px] text-center text-nowrap text-white top-[24px] tracking-[-0.8492px] translate-x-[-50%]">상담문의 (네이버 톡톡)</p>
                   <Icon3 additionalClassNames="left-[461.17px]" />
-                </div>
-                <div className="absolute bg-gradient-to-b from-[#ff8c42] h-[76px] left-[42px] rounded-[16px] shadow-[0px_10px_15px_-3px_rgba(0,0,0,0.1),0px_4px_6px_-4px_rgba(0,0,0,0.1)] to-[#ff6b1a] top-[10859px] w-[792px]" data-name="Button">
+                </a>
+                <a href="https://open.kakao.com/o/st4GSXai" target="_blank" rel="noopener noreferrer" onClick={() => (window as any).fbq?.('track', 'Contact')} className="absolute bg-gradient-to-b from-[#ff8c42] h-[76px] left-[42px] rounded-[16px] shadow-[0px_10px_15px_-3px_rgba(0,0,0,0.1),0px_4px_6px_-4px_rgba(0,0,0,0.1)] to-[#ff6b1a] top-[10859px] w-[792px] flex items-center justify-center cursor-pointer" data-name="Button">
                   <p className="absolute font-['Inter:Medium','Noto_Sans_KR:Medium',sans-serif] font-medium leading-[28px] left-1/2 not-italic text-[20px] text-center text-nowrap text-white top-[24px] tracking-[-0.8492px] translate-x-[-50%]">상담문의 (카카오톡)</p>
                   <Icon3 additionalClassNames="left-[476px]" />
-                </div>
+                </a>
                 <ContainerText2 text="잠깐!" additionalClassNames="left-[334px] top-[7845px]" />
                 <div className="absolute bg-white border-2 border-[#ffd6a7] border-solid h-[456px] left-[452px] rounded-[14px] shadow-[0px_1px_3px_0px_rgba(0,0,0,0.1),0px_1px_2px_-1px_rgba(0,0,0,0.1)] top-[8010px] w-[385px]" data-name="Container">
                   <div className="absolute bg-gradient-to-b content-stretch flex from-[#ff8c42] items-center justify-center left-[18px] pl-0 pr-[0.008px] py-0 rounded-[10px] size-[32px] to-[#ff6b1a] top-[24px]" data-name="Container">
