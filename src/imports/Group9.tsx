@@ -1390,7 +1390,7 @@ export default function Group() {
                           <div className="h-[86px] relative shrink-0 w-full" data-name="Container">
                             <div className="absolute content-stretch flex flex-col gap-[8px] h-[86px] items-start left-[88px] pb-0 pt-[8px] px-0 top-0 w-[708px]" data-name="Container">
                               <HeadingText6 text="신청하기" />
-                              <ParagraphText5 text="궁금한 점을 먼저 상담하고 시작하세요" />
+                                <ParagraphText5 text="2026 병오년 전통 사주 핵심 리포트 신청" />
                             </div>
                             <div className="absolute left-0 size-[64px] top-0" data-name="Container">
                               <div className="absolute bg-gradient-to-r content-stretch flex from-[#ff6900] items-center justify-center left-0 rounded-[1.67772e+07px] shadow-[0px_10px_15px_-3px_rgba(0,0,0,0.1),0px_4px_6px_-4px_rgba(0,0,0,0.1)] size-[64px] to-[#f54900] top-0" data-name="Container">
@@ -1404,7 +1404,7 @@ export default function Group() {
                           <div className="h-[86px] relative shrink-0 w-full" data-name="Container">
                             <div className="absolute content-stretch flex flex-col gap-[8px] h-[86px] items-start left-[88px] pb-0 pt-[8px] px-0 top-0 w-[708px]" data-name="Container">
                               <HeadingText6 text="결제" />
-                              <ParagraphText5 text="상담 신청 및 간편 결제를 진행해요" />
+                              <ParagraphText5 text="리포트 신청 후 결제가 진행됩니다." />
                             </div>
                             <div className="absolute left-0 size-[64px] top-0" data-name="Container">
                               <div className="absolute bg-gradient-to-r content-stretch flex from-[#ff6900] items-center justify-center left-0 rounded-[1.67772e+07px] shadow-[0px_10px_15px_-3px_rgba(0,0,0,0.1),0px_4px_6px_-4px_rgba(0,0,0,0.1)] size-[64px] to-[#f54900] top-0" data-name="Container">
@@ -1419,7 +1419,7 @@ export default function Group() {
                           <div className="h-[86px] relative shrink-0 w-full" data-name="Container">
                             <div className="absolute content-stretch flex flex-col gap-[8px] h-[86px] items-start left-[88px] pb-0 pt-[8px] px-0 top-0 w-[708px]" data-name="Container">
                               <HeadingText6 text="사전 질문 전달" />
-                              <ParagraphText5 text="생년월일/시간(가능 시) + 현재 상황 + 궁금한 항목을 보내주세요" />
+                                <ParagraphText5 text="사전 질문: 생년월일, 태어난 시간(가능 시), 신년운 분야(재물/건강/직장/사업/연애), 추가 질문" />
                             </div>
                             <div className="absolute left-0 size-[64px] top-0" data-name="Container">
                               <div className="absolute bg-gradient-to-r content-stretch flex from-[#ff6900] items-center justify-center left-0 rounded-[1.67772e+07px] shadow-[0px_10px_15px_-3px_rgba(0,0,0,0.1),0px_4px_6px_-4px_rgba(0,0,0,0.1)] size-[64px] to-[#f54900] top-0" data-name="Container">
@@ -1458,7 +1458,7 @@ export default function Group() {
                           </div>
                           <div className="h-[86px] relative shrink-0 w-full" data-name="Container">
                             <div className="absolute content-stretch flex flex-col gap-[8px] h-[86px] items-start left-[88px] pb-0 pt-[8px] px-0 top-0 w-[708px]" data-name="Container">
-                              <HeadingText6 text="해석 후 추가 상담이 필요하신 경우, 1만 원 할인된 금액으로 신청하실 수 있습니다." />
+                              <HeadingText6 text="(필요 시) 리포트 해석이 어려우시면 ‘리포트 해석(리딩) 상담’ 신청 가능해요. (리포트 구매자 1만원 할인)" />
                               <ParagraphText5 text="사주 흐름과 타로 리딩으로 2026년 운세 상담이 마무리됩니다" />
                             </div>
                             <div className="absolute left-0 size-[64px] top-[-1px]" data-name="Container">
