@@ -916,7 +916,7 @@ export default function Group() {
                 <div className="absolute bg-gradient-to-b from-[#ff8c42] h-[302px] left-[calc(50%-0.5px)] rounded-[24px] to-[#ff6b1a] top-[1015.36px] translate-x-[-50%] w-[680px]" data-name="Container">
                   <div className="absolute bg-[rgba(255,255,255,0.2)] h-[36px] left-[280px] rounded-[1.67772e+07px] top-[16px] w-[150.906px]" data-name="Container">
                     <div className="absolute content-stretch flex h-[16.5px] items-start left-[20px] top-[10.5px] w-[110.906px]" data-name="Text">
-                      <p className="font-['Inter:Regular','Noto_Sans_KR:Regular',sans-serif] font-normal leading-[20px] not-italic relative shrink-0 text-[14px] text-center text-nowrap text-white tracking-[-0.2904px]">모바일 url 링크 제공</p>
+                      <p className="font-['Inter:Regular','Noto_Sans_KR:Regular',sans-serif] font-normal leading-[20px] not-italic relative shrink-0 text-[14px] text-center text-nowrap text-white tracking-[-0.2904px]">모바일 및 pdf</p>
                     </div>
                   </div>
                   <div className="absolute h-[57.594px] left-[13px] top-[73px] w-[684px]" data-name="Paragraph">
@@ -1140,7 +1140,7 @@ export default function Group() {
                       </Container7>
                       <Container8>
                         <HeadingText2 text="언제 어디서나 편하게, 모바일로 보는 비대면 사주 리포트" />
-                        <ParagraphText3 text="PC나 방문 없이, 스마트폰 하나로 언제든 내 사주를 확인하세요. URL 링크로 전달되어 출퇴근길, 쉬는 시간에도 편하게 읽을 수 있습니다." />
+                        <ParagraphText3 text="PC나 방문 없이, 스마트폰 하나로 언제든 내 사주를 확인하세요. 모바일 및 pdf로 전달되어 출퇴근길, 쉬는 시간에도 편하게 읽을 수 있습니다." />
                       </Container8>
                     </BenefitCard>
                     <BenefitCard>
@@ -1389,7 +1389,7 @@ export default function Group() {
                         <div className="absolute content-stretch flex flex-col gap-[32px] h-[676px] items-start left-0 top-0 w-[796px]" data-name="Container">
                           <div className="h-[86px] relative shrink-0 w-full" data-name="Container">
                             <div className="absolute content-stretch flex flex-col gap-[8px] h-[86px] items-start left-[88px] pb-0 pt-[8px] px-0 top-0 w-[708px]" data-name="Container">
-                              <HeadingText6 text="네이버 톡톡으로 문의(전화번호 노출 x)" />
+                              <HeadingText6 text="신청하기" />
                               <ParagraphText5 text="궁금한 점을 먼저 상담하고 시작하세요" />
                             </div>
                             <div className="absolute left-0 size-[64px] top-0" data-name="Container">

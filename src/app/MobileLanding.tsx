@@ -78,7 +78,7 @@ const benefits = [
     number: "1",
     title: "언제 어디서나 편하게, 모바일로 보는 비대면 사주 리포트",
     description:
-      "PC나 방문 없이, 스마트폰 하나로 언제든 내 사주를 확인하세요. URL 링크로 전달되어 출퇴근길, 쉬는 시간에도 편하게 읽을 수 있습니다.",
+      "PC나 방문 없이, 스마트폰 하나로 언제든 내 사주를 확인하세요. 모바일 및 pdf로 전달되어 출퇴근길, 쉬는 시간에도 편하게 읽을 수 있습니다.",
   },
   {
     number: "2",
@@ -106,7 +106,7 @@ const reportCards = [
 const steps = [
   {
     number: "1",
-    title: "네이버 톡톡으로 문의(전화번호 노출 x)",
+    title: "신청하기",
     description: "궁금한 점을 먼저 상담하고 시작하세요",
   },
   {
@@ -249,7 +249,7 @@ export default function MobileLanding() {
       <section className="py-6 sm:py-8">
         <div className="mx-auto w-full max-w-[420px] px-4">
           <div className="rounded-[24px] bg-gradient-to-b from-[#ff8c42] to-[#ff6b1a] px-4 py-5 text-center text-white sm:px-5 sm:py-6">
-            <span className="inline-flex items-center rounded-full bg-white/20 px-4 py-1 text-xs">모바일 url 링크 제공</span>
+            <span className="inline-flex items-center rounded-full bg-white/20 px-4 py-1 text-xs">모바일 및 pdf</span>
             <p className="mt-3 text-2xl font-semibold sm:mt-4 sm:text-[36px]">10,000원</p>
             <div className="mt-4 grid gap-2 sm:mt-5 sm:gap-3">
               <button
