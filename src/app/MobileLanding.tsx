@@ -152,7 +152,7 @@ export default function MobileLanding() {
   const [isContactOpen, setIsContactOpen] = useState(false);
 
   const openContactModal = () => {
-    (window as any).fbq?.("track", "Contact");
+    (window as any).fbq?.("track", "SubmitApplication");
     setIsContactOpen(true);
   };
 
