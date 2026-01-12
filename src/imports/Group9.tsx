@@ -688,7 +688,7 @@ function Paragraph({ additionalClassNames = "" }: ParagraphProps) {
   return (
     <div className="content-stretch flex gap-[8px] h-[20px] items-start relative shrink-0 w-full">
       <TextText3 text="✓" />
-      <TextText4 text="네이버 톡톡으로 해석본 전달" additionalClassNames="w-[167.953px]" />
+      <TextText4 text="모바일 또는 pdf로 해석본이 전달됩니다." additionalClassNames="w-[210px]" />
     </div>
   );
 }
@@ -909,7 +909,7 @@ export default function Group() {
                       <p className="absolute font-['Inter:Medium','Noto_Sans_KR:Medium',sans-serif] font-medium leading-[28px] left-[91px] not-italic text-[#2d2d2d] text-[20px] text-center text-nowrap top-0 tracking-[-0.8492px] translate-x-[-50%]">읽기 쉬운 모바일 리포트</p>
                     </Wrapper4>
                     <Wrapper2 additionalClassNames="w-[302px]">
-                      <p className="absolute font-['Inter:Regular','Noto_Sans_KR:Regular',sans-serif] font-normal leading-[26px] left-[151px] not-italic text-[#666] text-[16px] text-center top-[-0.5px] tracking-[-0.6325px] translate-x-[-50%] w-[296px]">어려운 용어는 빼고, 모바일로 읽을 수 있게 url 링크로 보내드립니다.</p>
+                      <p className="absolute font-['Inter:Regular','Noto_Sans_KR:Regular',sans-serif] font-normal leading-[26px] left-[151px] not-italic text-[#666] text-[16px] text-center top-[-0.5px] tracking-[-0.6325px] translate-x-[-50%] w-[296px]">어려운 용어는 빼고, 모바일 또는 pdf로 해석본이 전달됩니다.</p>
                     </Wrapper2>
                   </div>
                 </div>

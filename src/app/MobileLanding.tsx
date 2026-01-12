@@ -23,7 +23,7 @@ const highlights = [
   },
   {
     title: "읽기 쉬운 모바일 리포트",
-    description: "어려운 용어는 빼고, 모바일로 읽을 수 있게 url 링크로 보내드립니다.",
+    description: "어려운 용어는 빼고, 모바일 또는 pdf로 해석본이 전달됩니다.",
   },
 ];
 
@@ -212,7 +212,7 @@ export default function MobileLanding() {
             <div className="mt-4 rounded-[10px] bg-[#fff7ed] p-3 text-sm text-[#666] sm:p-4">
               <ul className="space-y-2">
                 <li>✓ 일간,일주,용신,개운법,신년운세(직장,사업,건강,재물,연애운)</li>
-                <li>✓ 네이버 톡톡으로 해석본 전달</li>
+                <li>✓ 모바일 또는 pdf로 해석본이 전달됩니다.</li>
                 <li>✓ 24시간 내 전달</li>
               </ul>
             </div>
