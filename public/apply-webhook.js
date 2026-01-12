@@ -1,6 +1,6 @@
 (() => {
   const WEBHOOK_URL =
-    "https://webhook-processor-production-bfe2.up.railway.app/webhook/a9db0219-47c4-4b70-a0ea-8f54c8763c29";
+    "https://primary-production-6a869.up.railway.app/webhook-test/a8729524-5a79-42f8-99c4-c2e49e28b3fe";
   const LOG_PREFIX = "[apply-webhook]";
   const TIMEOUT_MS = 10000;
 
