@@ -1516,6 +1516,7 @@ export default function Group() {
                 </div>
                 <div className="absolute bg-[#faf8f5] h-[237.834px] left-0 top-[9675px] w-[888px]" data-name="Section" />
                 <button
+                  data-gtm="apply-section"
                   type="button"
                   onClick={openContactModal}
                   className="absolute bg-gradient-to-b from-[#ff8c42] h-[76px] left-[42px] rounded-[16px] shadow-[0px_10px_15px_-3px_rgba(0,0,0,0.1),0px_4px_6px_-4px_rgba(0,0,0,0.1)] to-[#ff6b1a] top-[10775px] w-[792px] flex items-center justify-center cursor-pointer"

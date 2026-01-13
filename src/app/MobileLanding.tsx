@@ -556,7 +556,7 @@ export default function MobileLanding() {
       </section>
 
       {/* 최종 CTA 섹션 */}
-      <section className="pb-12 pt-8 sm:pb-16 sm:pt-10">
+      <section className="pb-12 pt-8 sm:pb-16 sm:pt-10" data-gtm="apply-section">
         <div className="mx-auto flex w-full max-w-[420px] flex-col gap-3 px-4 sm:gap-4">
           <div className="grid gap-2 sm:gap-4">
             <button
