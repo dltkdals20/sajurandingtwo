@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useRef, useState } from "react";
 import heroHorse from "../assets/53e8a7fccf8babba7f93e9039ab3ed7387b0357a.png";
 import heroOrb from "../assets/992b32e06699ae77ca01c46bbfbac360c7c4c491.png";
 import heroIllustration from "../assets/c19b998616706e20148c0ec6f87a223207b3c673.png";
@@ -151,6 +151,7 @@ const specialties = [
 
 export default function MobileLanding() {
   const [isContactOpen, setIsContactOpen] = useState(false);
+  const targetRef = useRef<HTMLElement | null>(null);
 
   const openContactModal = () => {
     (window as any).fbq?.("track", "SubmitApplication");
@@ -162,7 +163,10 @@ export default function MobileLanding() {
   return (
     <main className="min-h-screen bg-[#faf8f5] text-[#1e2939]">
       {/* 히어로 섹션 */}
-      <section className="relative overflow-hidden bg-gradient-to-b from-[#fff8f0] to-white pb-8 pt-8 sm:pb-10 sm:pt-10">
+      <section
+        ref={targetRef}
+        className="relative overflow-hidden bg-gradient-to-b from-[#fff8f0] to-white pb-8 pt-8 sm:pb-10 sm:pt-10"
+      >
         {/* 장식 요소 */}
         <div className="absolute right-4 top-6 text-3xl opacity-40 sm:right-6 sm:top-8 sm:text-4xl">⭐</div>
         <div className="mx-auto flex w-full max-w-[420px] flex-col items-center gap-3 px-4 text-center sm:gap-4">
