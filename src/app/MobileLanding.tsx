@@ -196,9 +196,9 @@ export default function MobileLanding() {
       </section>
 
       {/* 가격 섹션 */}
-      <section className="py-6 sm:py-8">
+      <section className="py-6 sm:py-8" data-gtm="section-apply-mobile">
         <div className="mx-auto w-full max-w-[420px] px-4">
-          <div className="rounded-[16px] border-2 border-[#ffb86a] bg-white p-5 shadow-[0px_20px_25px_-5px_rgba(0,0,0,0.1),0px_8px_10px_-6px_rgba(0,0,0,0.1)] sm:p-6">
+          <div className="rounded-[16px] border-2 border-[#ffb86a] bg-white p-5 shadow-[0px_20px_25px_-5px_rgba(0,0,0,0.1),0px_8px_10px_-6px_rgba(0,0,0,0.1)] sm:p-6" data-gtm="section-pricing-mobile">
             <div className="flex items-center justify-between">
               <p className="text-base font-semibold text-[#1e2939] sm:text-lg">전통 사주 핵심 리포트</p>
               <span className="rounded-full bg-[#ff7d30] px-3 py-1 text-xs font-semibold text-white">66% 할인</span>
@@ -271,7 +271,7 @@ export default function MobileLanding() {
       </section>
 
       {/* 고객 후기 섹션 */}
-      <section className="py-8 sm:py-12">
+      <section className="py-8 sm:py-12" data-gtm="section-review-mobile">
         <div className="mx-auto w-full max-w-[420px] px-4">
           <div className="flex flex-col items-center gap-2 text-center">
             <p className="text-xl font-semibold text-[#2d2d2d] sm:text-2xl">고객 후기</p>

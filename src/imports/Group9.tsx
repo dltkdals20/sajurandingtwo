@@ -800,12 +800,12 @@ export default function Group() {
     <div className="relative size-full">
       <ContactModal isOpen={isContactOpen} onClose={closeContactModal} />
       <div className="absolute bg-gradient-to-b from-[#fff8f0] h-[1486.618px] left-0 to-white top-0 w-[888px]" data-name="Section">
-        <div className="absolute bg-gradient-to-b content-stretch flex flex-col from-[#fff7ed] h-[803px] items-start left-px pb-0 pt-[64px] px-0 to-white top-[8148px] w-[883px]" data-name="Pricing">
+        <div className="absolute bg-gradient-to-b content-stretch flex flex-col from-[#fff7ed] h-[803px] items-start left-px pb-0 pt-[64px] px-0 to-white top-[8148px] w-[883px]" data-name="Pricing" data-gtm="section-apply-desktop">
           <div className="h-[645px] relative shrink-0 w-full" data-name="Container">
             <div className="absolute content-stretch flex h-[36px] items-start left-[32px] top-0 w-[796px]" data-name="Heading 2">
               <p className="basis-0 font-['Inter:Medium','Noto_Sans_KR:Medium',sans-serif] font-medium grow leading-[36px] min-h-px min-w-px not-italic relative shrink-0 text-[#1e2939] text-[30px] text-center tracking-[0.3955px]">2026년 전통 사주 핵심 리포트</p>
             </div>
-            <div className="absolute bg-white border-2 border-[#ffb86a] border-solid h-[525px] left-[206px] overflow-clip rounded-[16px] shadow-[0px_20px_25px_-5px_rgba(0,0,0,0.1),0px_8px_10px_-6px_rgba(0,0,0,0.1)] top-[76px] w-[448px]" data-name="Container">
+            <div className="absolute bg-white border-2 border-[#ffb86a] border-solid h-[525px] left-[206px] overflow-clip rounded-[16px] shadow-[0px_20px_25px_-5px_rgba(0,0,0,0.1),0px_8px_10px_-6px_rgba(0,0,0,0.1)] top-[76px] w-[448px]" data-name="Container" data-gtm="section-pricing-desktop">
               <div className="absolute bg-gradient-to-r from-[#ff6900] left-[182px] rounded-[1.67772e+07px] shadow-[0px_10px_15px_-3px_rgba(0,0,0,0.1),0px_4px_6px_-4px_rgba(0,0,0,0.1)] size-[80px] to-[#f54900] top-[32px]" data-name="Container">
                 <Icon />
               </div>
@@ -990,7 +990,7 @@ export default function Group() {
                     <p className="absolute font-['Inter:Regular','Noto_Sans_KR:Regular',sans-serif] font-normal leading-[29.25px] left-[190.5px] not-italic text-[#666] text-[18px] text-center text-nowrap top-[0.5px] tracking-[-0.7995px] translate-x-[-50%]">결 상담소의 상담을 받아보신 분들의 생생한 후기입니다.</p>
                   </Wrapper3>
                 </div>
-                <div className="absolute gap-[24px] grid grid-cols-[repeat(2,_minmax(0px,_1fr))] grid-rows-[repeat(2,_minmax(0px,_1fr))] h-[410px] left-1/2 -translate-x-1/2 top-[185.25px] w-[792px]" data-name="Container">
+                <div className="absolute gap-[24px] grid grid-cols-[repeat(2,_minmax(0px,_1fr))] grid-rows-[repeat(2,_minmax(0px,_1fr))] h-[410px] left-1/2 -translate-x-1/2 top-[185.25px] w-[792px]" data-name="Container" data-gtm="section-review-desktop">
                   <ReviewCard additionalClassNames="[grid-area:1_/_1]">
                     <div className="content-stretch flex h-[40px] items-center justify-between relative shrink-0 w-full" data-name="Container">
                       <Container6>
