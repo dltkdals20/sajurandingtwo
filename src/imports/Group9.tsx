@@ -836,7 +836,7 @@ export default function Group() {
         <div className="absolute contents left-0 top-[64px]">
           <div className="absolute contents left-0 top-[64px]">
             <div className="absolute contents left-0 top-[64px]">
-              <div className="absolute bg-gradient-to-b from-[#fff8f0] to-white h-[1394px] left-[calc(50%-0.5px)] top-[64px] translate-x-[-50%] w-[837px]" data-name="Container">
+              <div className="absolute bg-gradient-to-b from-[#fff8f0] to-white h-[1394px] left-[calc(50%-0.5px)] top-[64px] translate-x-[-50%] w-[837px]" data-name="Container" data-gtm="main-hero">
                 <div className="absolute h-[487px] left-0 top-[202.09px] w-[776px]" data-name="Container">
                   <div className="absolute h-[1023.211px] left-0 top-[485.85px] w-[776px]" data-name="Image (적토마)">
                     <div className="absolute inset-0 overflow-hidden pointer-events-none">

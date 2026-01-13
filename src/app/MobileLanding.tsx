@@ -165,6 +165,7 @@ export default function MobileLanding() {
       {/* 히어로 섹션 */}
       <section
         ref={targetRef}
+        data-gtm="main-hero"
         className="relative overflow-hidden bg-gradient-to-b from-[#fff8f0] to-white pb-8 pt-8 sm:pb-10 sm:pt-10"
       >
         {/* 장식 요소 */}
