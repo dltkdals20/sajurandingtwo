@@ -157,6 +157,7 @@ export default function ContactModal({ isOpen, onClose }: ContactModalProps) {
           <button
             type="submit"
             data-role="apply-submit"
+            data-gtm="apply-submit"
             disabled={!isConsentChecked}
             className="w-full rounded-full bg-gradient-to-b from-[#ff8c42] to-[#ff6b1a] px-5 py-3 text-sm font-semibold text-white shadow-[0px_12px_20px_-10px_rgba(255,107,26,0.7)] disabled:cursor-not-allowed disabled:opacity-60"
           >

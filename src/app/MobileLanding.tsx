@@ -218,6 +218,7 @@ export default function MobileLanding() {
               </ul>
             </div>
             <button
+              data-gtm="apply-mobile"
               type="button"
               onClick={openContactModal}
               className="mt-4 w-full rounded-full bg-gradient-to-b from-[#ff8c42] to-[#ff6b1a] px-5 py-3 text-sm font-semibold text-white shadow-[0px_12px_20px_-10px_rgba(255,107,26,0.7)] sm:mt-5 sm:py-4 sm:text-base block text-center"
@@ -254,6 +255,7 @@ export default function MobileLanding() {
             <p className="mt-3 text-2xl font-semibold sm:mt-4 sm:text-[36px]">10,000원</p>
             <div className="mt-4 grid gap-2 sm:mt-5 sm:gap-3">
               <button
+                data-gtm="apply-mobile"
                 type="button"
                 onClick={openContactModal}
                 className="rounded-full bg-white px-4 py-2 text-sm font-semibold text-[#ff7d30] sm:py-3 block text-center"
@@ -330,6 +332,7 @@ export default function MobileLanding() {
             </p>
             <div className="grid gap-2 sm:gap-3">
               <button
+                data-gtm="apply-mobile"
                 type="button"
                 onClick={openContactModal}
                 className="rounded-full bg-gradient-to-b from-[#ff8c42] to-[#ff6b1a] px-4 py-2 text-sm font-semibold text-white sm:py-3 block text-center"
@@ -552,6 +555,7 @@ export default function MobileLanding() {
         <div className="mx-auto flex w-full max-w-[420px] flex-col gap-3 px-4 sm:gap-4">
           <div className="grid gap-2 sm:gap-4">
             <button
+              data-gtm="apply-mobile"
               type="button"
               onClick={openContactModal}
               className="rounded-full bg-gradient-to-b from-[#ff8c42] to-[#ff6b1a] px-5 py-3 text-lg font-semibold text-white shadow-[0px_12px_20px_-10px_rgba(255,107,26,0.7)] sm:py-4 sm:text-xl block text-center"

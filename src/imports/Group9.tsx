@@ -492,13 +492,15 @@ type ButtonProps = {
   text1?: string;
   onClick?: () => void;
   additionalClassNames?: string;
+  dataGtm?: string;
 };
 
-function Button({ text, text1, onClick, additionalClassNames = "" }: ButtonProps) {
+function Button({ text, text1, onClick, additionalClassNames = "", dataGtm }: ButtonProps) {
   const hasSecondaryText = Boolean(text1);
   
   return (
     <button
+      data-gtm={dataGtm}
       type="button"
       onClick={onClick}
       className={clsx("absolute bg-gradient-to-r from-[#ff6900] h-[62px] rounded-[10px] shadow-[0px_4px_6px_-1px_rgba(0,0,0,0.1),0px_2px_4px_-2px_rgba(0,0,0,0.1)] to-[#f54900] top-[93px] w-[183px] flex items-center justify-center cursor-pointer", additionalClassNames)}
@@ -655,11 +657,13 @@ function ContainerText({ text }: ContainerTextProps) {
 type ButtonTextProps = {
   text: string;
   onClick?: () => void;
+  dataGtm?: string;
 };
 
-function ButtonText({ text, onClick }: ButtonTextProps) {
+function ButtonText({ text, onClick, dataGtm }: ButtonTextProps) {
   return (
     <button
+      data-gtm={dataGtm}
       type="button"
       onClick={onClick}
       className="absolute bg-gradient-to-r from-[#ff6900] h-[60px] left-[32px] rounded-[14px] to-[#f54900] top-[429px] w-[380px] flex items-center justify-center cursor-pointer"
@@ -819,7 +823,7 @@ export default function Group() {
                   <TextText4 text="24시간 내 전달" additionalClassNames="w-[136.25px]" />
                 </div>
               </div>
-              <ButtonText text="지금 신청하기" onClick={openContactModal} />
+              <ButtonText dataGtm="apply-desktop" text="지금 신청하기" onClick={openContactModal} />
               <ContainerText text="66% 할인" />
             </div>
             <div className="absolute h-[20px] left-[32px] top-[625px] w-[796px]" data-name="Paragraph">
@@ -923,6 +927,7 @@ export default function Group() {
                     <p className="absolute font-['Inter:Regular','Noto_Sans_KR:Regular',sans-serif] font-normal leading-[57.6px] left-[calc(50%+0.5px)] not-italic text-[48px] text-center text-nowrap text-white top-0 tracking-[0.8316px] translate-x-[-50%]">10,000원</p>
                   </div>
                   <button
+                    data-gtm="apply-desktop"
                     type="button"
                     onClick={openContactModal}
                     className="absolute bg-white h-[60px] left-1/2 rounded-[1.67772e+07px] top-[150.64px] translate-x-[-50%] w-[270.352px] flex items-center justify-center cursor-pointer hover:bg-gray-50"
@@ -1112,7 +1117,7 @@ export default function Group() {
                     </div>
                     <p className="absolute font-['Inter:Regular','Noto_Sans_KR:Regular',sans-serif] font-normal leading-[28px] left-1/2 not-italic text-[#364153] text-[18px] text-center text-nowrap top-[28px] tracking-[-0.4395px] translate-x-[-50%]">2026년 운세를 정리했어요</p>
                   </div>
-                  <Button text="신청하기" onClick={openContactModal} additionalClassNames="left-1/2 -translate-x-1/2" />
+                  <Button dataGtm="apply-desktop" text="신청하기" onClick={openContactModal} additionalClassNames="left-1/2 -translate-x-1/2" />
                 </div>
                 <div className="absolute contents left-[49px] top-[1516px]">
                   <div className="absolute h-[201px] left-[49px] top-[1516px] w-[302px]" data-name="A_3D-rendered_digital_illustration_features_a_frie 1">
@@ -1557,7 +1562,7 @@ export default function Group() {
                       <TextText4 text="24시간 내 전달" additionalClassNames="w-[136.25px]" />
                     </div>
                   </div>
-                  <ButtonText text="지금 신청하기" onClick={openContactModal} />
+                  <ButtonText dataGtm="apply-desktop" text="지금 신청하기" onClick={openContactModal} />
                   <ContainerText text="66% 할인" />
                 </div>
                 <div className="absolute h-[495px] left-[14px] top-[7952px] w-[414px]" data-name="A_3D-rendered_animated_GIF_features_a_cartoon-styl 1">
